@@ -23,7 +23,7 @@ The runtime corpus and precomputed retrieval artifacts are implemented. The docu
 - five working Streamlit tabs: Corpus, Search, Wiki, Chatbot, and Evaluation
 - a current 724-vector, 1,536-dimensional FAISS semantic index
 - 139 automated tests passing
-- all 10 document-defined questions plus 5 engineering checks in the saved live evaluation
+- the public Evaluation UI exposes only the 10 document-defined questions; 5 additional engineering checks remain in the internal saved evaluation artifact
 - a completed five-answer manual citation audit and document-rubric report
 - full official-answer audit: 10 PASS, 0 PARTIAL, 0 FAIL
 - relation-quality audit: 987/987 integrity checks and 37/37 manually reviewed rows passing
@@ -33,7 +33,7 @@ The runtime corpus and precomputed retrieval artifacts are implemented. The docu
 
 `OPENAI_API_KEY` is optional for corpus, keyword-search, wiki, and saved-evaluation browsing. It is required for live query embeddings, chatbot answers, and rebuilding the FAISS index. Publication to Streamlit Community Cloud requires the owner's GitHub and Streamlit accounts.
 
-See [outputs/status_report.md](outputs/status_report.md) for readiness, [outputs/demo_answers.md](outputs/demo_answers.md) for the document-defined live evaluation, [outputs/full_demo_correctness_audit.md](outputs/full_demo_correctness_audit.md) for its complete answer audit, [outputs/scope_repair_regression_audit.md](outputs/scope_repair_regression_audit.md) for the H/F/G repair evidence, [outputs/holdout_v4_first_run_audit.md](outputs/holdout_v4_first_run_audit.md) for the latest immutable untouched-holdout result, [outputs/holdout_first_run_audit.md](outputs/holdout_first_run_audit.md) for the original first-run history, [outputs/relation_quality_audit.md](outputs/relation_quality_audit.md) for Gate 2 evidence, [outputs/wiki_quality_audit.md](outputs/wiki_quality_audit.md) for Gate 3 evidence, and [outputs/requirements_evaluation.md](outputs/requirements_evaluation.md) for the rubric score.
+See [outputs/status_report.md](outputs/status_report.md) for readiness, [outputs/demo_answers.md](outputs/demo_answers.md) for the complete internal saved evaluation (10 official questions plus 5 engineering checks), [outputs/full_demo_correctness_audit.md](outputs/full_demo_correctness_audit.md) for the official-answer audit, [outputs/scope_repair_regression_audit.md](outputs/scope_repair_regression_audit.md) for the H/F/G repair evidence, [outputs/holdout_v4_first_run_audit.md](outputs/holdout_v4_first_run_audit.md) for the latest immutable untouched-holdout result, [outputs/holdout_first_run_audit.md](outputs/holdout_first_run_audit.md) for the original first-run history, [outputs/relation_quality_audit.md](outputs/relation_quality_audit.md) for Gate 2 evidence, [outputs/wiki_quality_audit.md](outputs/wiki_quality_audit.md) for Gate 3 evidence, and [outputs/requirements_evaluation.md](outputs/requirements_evaluation.md) for the rubric score. The public report viewer and download filter the internal artifact to the 10 official questions.
 
 ## Quick start
 
@@ -62,7 +62,7 @@ The versioned `db/conservation.db` is the complete runtime corpus, so the app do
 | Structured knowledge | rule-based typed entities and five required relation types, each tied to evidence | Yes |
 | Wiki | 15 evidence-ranked Markdown pages with cited facts, qualified relationships, and validated internal links | Yes |
 | Chatbot | Responses API answer generation, retrieved-context-only prompt, citation allow-list validation, and abstention | Requires API key |
-| Evaluation | 15 saved document/engineering cases, three 20-question known regression sets, reviewer rubrics, artifact audits, and feedback link | Yes |
+| Evaluation | 10 official questions in the public UI; 5 engineering checks, known regression sets, and holdouts retained as internal evaluation artifacts | Yes |
 
 ## Rebuild pipeline
 
@@ -86,11 +86,13 @@ Rebuild the semantic index after setting `OPENAI_API_KEY`:
 python scripts/04_build_vector_index.py
 ```
 
-Generate live model answers in the evaluation report with:
+Regenerate the complete internal 15-case evaluation artifact with live model answers using:
 
 ```bash
 python scripts/07_evaluate.py --with-openai
 ```
+
+The public Evaluation UI continues to expose only the 10 official requirement questions from that artifact.
 
 Acquisition and processing steps are resumable. Use each command's `--help` option for document-specific or forced rebuild options.
 

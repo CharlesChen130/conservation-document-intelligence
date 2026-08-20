@@ -52,9 +52,15 @@ The application contains five tabs:
 | Search | Retrieve page-aware evidence using keyword or semantic search |
 | Wiki | Read generated conservation pages with citations and related material |
 | Chatbot | Ask natural-language questions and inspect the evidence used |
-| Evaluation | Review system counts, evaluation guidance, and saved reports |
+| Evaluation | Review system counts and the 10 official requirement questions and saved answers |
 
 A research-prototype warning remains visible at the top of the application.
+
+### Evaluation tab
+
+The public Evaluation tab is intentionally limited to the 10 demonstration questions specified in the project requirements. Select a question to review its saved answer and citations. **View official evaluation report** opens a read-only snapshot of those 10 cases, and **Download official evaluation report** downloads the same public 10-question report.
+
+Five additional engineering questions and the holdout and regression suites are retained as internal development artifacts. They are not selectable, displayed, or included in the public report download.
 
 ## 5. Using the Corpus tab
 
@@ -403,7 +409,7 @@ Confirm the following after first deployment and after material updates:
 - [ ] **Retrieved evidence** expands and matches the answer.
 - [ ] An out-of-corpus question produces an insufficient-evidence response.
 - [ ] Evaluation metrics show 724 chunks, 6,795 entity mentions, 987 relations, and 15 wiki pages.
-- [ ] The evaluation report downloads.
+- [ ] The official 10-question evaluation report displays and downloads without internal engineering or holdout questions.
 - [ ] A reboot retains the same corpus and index without rebuilding.
 - [ ] The OpenAI project usage dashboard shows expected, bounded activity.
 
