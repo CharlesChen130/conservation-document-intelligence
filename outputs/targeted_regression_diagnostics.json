@@ -1,0 +1,61 @@
+[
+  {
+    "id": "H03",
+    "question": "How is climate change incorporated into conservation planning in the Missouri-focused documents?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Synthesize planning or adaptation evidence that is specifically tied to Missouri sources.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- The Missouri Comprehensive Conservation Strategy (CCS) integrates climate change resiliency into conservation planning. [DOC018]\n- MDC is developing a climate adaptation and resilience plan that integrates climate smart planning for department operations and infrastructure. [DOC018]",
+    "evidence_chunk_ids": [
+      "DOC018-C0002",
+      "DOC034-C0049",
+      "DOC018-C0001",
+      "DOC001-C0021",
+      "DOC001-C0018",
+      "DOC033-C0026"
+    ],
+    "elapsed_seconds": 8.437,
+    "embedding_input_tokens": 14,
+    "chat_input_tokens": 5480,
+    "chat_output_tokens": 437,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Missouri Comprehensive Conservation Strategy (CCS) integrates climate change resiliency into conservation planning.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The Missouri CCS was approved in February 2022. This is the first time a state has combined these documents into a single framework. Missouri\u2019s plan is serving as an example across the nation on how conservation work is completed today and into the future. Climate Change MDC continues to develop a climate adaptation and resilience plan integrating climate smart planning for department operations and infrastructure."
+          ]
+        },
+        {
+          "claim": "MDC is developing a climate adaptation and resilience plan that integrates climate smart planning for department operations and infrastructure.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Climate Change MDC continues to develop a climate adaptation and resilience plan integrating climate smart planning for department operations and infrastructure. This internal effort will identify and catalog existing efforts and initiatives within MDC that have an established nexus to climate adaptation and resilience that can be strengthened, as well as identification of future efforts to create adaptive operations."
+          ]
+        },
+        {
+          "claim": "The Missouri State Wildlife Action Plan recognizes climate change as a major threat to fish, wildlife, and their habitats and incorporates climate change considerations into forest management and conservation planning.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Climate change is now widely recognized as a potential major threat to fish and wildlife and the habitat systems on which they depend. Climate change is a particularly challenging threat because of the ways in which it may interact with other threats, such as invasive species and disease, and because of the degree of uncertainty regarding the timing, seasonality, intensity and sometimes even direction of the impacts that may occur as a result of changing climate. Beginning in 2011 the U.S.Forest"
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "The Missouri Department of Conservation (MDC) documents explicitly describe how climate change is incorporated into conservation planning through the development of a Comprehensive Conservation Strategy (CCS) that integrates climate change resiliency and climate adaptation and resilience plans. The Missouri State Wildlife Action Plan also details climate change as a major threat and includes assessments and planning to address climate impacts on habitats and species."
+    }
+  }
+]

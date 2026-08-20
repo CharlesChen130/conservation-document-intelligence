@@ -1,0 +1,478 @@
+[
+  {
+    "id": "G01",
+    "question": "Which sources give managers concrete ways to identify, monitor, or control invasive Phragmites?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Find Phragmites-specific detection, mapping, monitoring, or management evidence without substituting generic invasive-plant practices.",
+    "status": "structured_generated_pruned_refined",
+    "answer": "The retrieved evidence supports:\n\n- **Aquatic Invasive Species Research Report** \u2014 ERDC is currently developing assays that can be incorporated in hand-held equipment for rapid detection and genetic discrimination between phragmites haplotypes found in North America. Methods to distinguish native from non-native haplotypes and hybrids will inform when and where to implement management [DOC006, pp. 10-12]\n- **Invasive Species Accomplishments Report** \u2014 A USGS-Great Lakes Science Center scientist counts invasive Phragmites australis stems within a sampling quadrat in Ohio to support landscape-scale adaptive management [DOC007, pp. 16-22]",
+    "evidence_chunk_ids": [
+      "DOC006-C0007",
+      "DOC001-C0039",
+      "DOC006-C0006",
+      "DOC007-C0004",
+      "DOC008-C0004",
+      "DOC007-C0007",
+      "DOC008-C0007",
+      "DOC005-C0009"
+    ],
+    "elapsed_seconds": 8.312,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 7627,
+    "chat_output_tokens": 506,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 lacks entity-bound requested method evidence",
+      "claim 5 lacks an explicit subject-bound source span",
+      "claim 5 lacks entity-bound requested method evidence"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Aquatic Invasive Species Research Report describes development of gene-silencing technologies and assays for rapid detection and genetic discrimination between phragmites haplotypes to inform management.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "ERDC is currently developing assays that can be incorporated in hand-held equipment for rapid detection and genetic discrimination between phragmites haplotypes found in North America. Methods to distinguish native from non-native haplotypes and hybrids will inform when and where to implement management."
+          ]
+        },
+        {
+          "claim": "Aquatic Invasive Species Research Report reports that Technical Advisory Group recommended field release of insect agents for control of phragmites as a biological control method.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Recent successes include a recommendation by the Technical Advisory Group for Biological Control Agents on Weeds (TAG-BCAW) for field release of two insect agents for control of phragmites."
+          ]
+        },
+        {
+          "claim": "Invasive Species Accomplishments Report highlights microbial control as an innovative solution for controlling invasive Phragmites.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "Innovated solutions for control or eradication to reduce economic risks and protect native species ... Phragmites (e.g., microbial control)"
+          ]
+        },
+        {
+          "claim": "Invasive Species Accomplishments Report notes USGS scientists count invasive Phragmites australis stems within sampling quadrats to support landscape-scale adaptive management.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "A USGS-Great Lakes Science Center scientist counts invasive Phragmites australis stems within a sampling quadrat in Ohio to support landscape-scale adaptive management."
+          ]
+        },
+        {
+          "claim": "Invasive Species Accomplishments Report describes collaboration among agencies to detect, control, and eradicate invasive species including Phragmites using integrated management strategies.",
+          "source_labels": [
+            "S7"
+          ],
+          "supporting_spans": [
+            "BIA, BLM, BOR, NPS, USFWS, and USGS collaborated with partners across the country to detect, control, and eradicate (when possible) nutria and restore damaged marsh habitat. ... Continued collaboration will apply proven treatments and integrated management strategies ..."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific step-by-step protocols for field identification",
+        "Detailed monitoring schedules or frequencies",
+        "Exact control techniques with application instructions"
+      ],
+      "reason": "Sources S1, S3, S4, S5, S6, and S7 provide concrete methods for identifying, monitoring, or controlling invasive Phragmites."
+    }
+  },
+  {
+    "id": "G02",
+    "question": "How does Missouri's wetland program combine monitoring, regulation, voluntary restoration, water-quality standards, and education?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Cover the named program elements from Missouri evidence while keeping documented goals separate from completed outcomes.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC002-C0001",
+      "DOC020-C0011",
+      "DOC002-C0008",
+      "DOC032-C0028",
+      "DOC023-C0001",
+      "DOC018-C0006"
+    ],
+    "elapsed_seconds": 6.292,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5315,
+    "chat_output_tokens": 472,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 4 lacks an explicit subject-bound source span",
+      "claim 5 lacks an explicit subject-bound source span",
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Missouri Wetland Program Plan includes monitoring and assessment activities involving multiple agencies to promote scientific knowledge about wetlands.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Universities and other agencies help monitor and promote scientific knowledge about wetlands and their rare or endangered inhabitants."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan addresses regulation through avoidance, minimization, and mitigation of permanent impacts to wetlands by federal and state agencies.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Some of these agencies regulate impacts to wetlands to protect habitats and aquatic resource functions through avoidance, minimization, and mitigation of permanent impacts."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan promotes voluntary restoration and protection through incentives and assistance provided by private and governmental entities.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Other entities, both private and governmental, provide incentives and assistance for restoring wetlands."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan develops wetland-specific water quality standards including numeric criteria, narrative criteria, designated uses, and anti-degradation policies.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "The department\u2019s Environmental Services Program (ESP) will collect wetland-specific water quality data to aid in the establishment of water quality standards. ... Establish and revise designated uses for wetland water quality. ... Develop wetland-specific narrative criteria. ... Develop wetland-specific numeric criteria. ... Develop wetland anti-degradation policy."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan incorporates education through outreach, training, webinars, workshops, and public engagement to promote wetland conservation and awareness.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Develop educational strategies that provide state resource managers and citizens with information to conserve and promote wetland resources in Missouri. ... Participate in meetings, workshops and outreach activities with interested parties to promote wetland resources. ... The department participates in webinars hosted by NAWM, NRCS, TNC, USFWS, and other entities for continuing education and training in wetland sciences and issues. ... Conduct wetland education and outreach as part of the ..."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "The Missouri Wetland Program Plan [S1, S3] explicitly details how the program integrates monitoring, regulation, voluntary restoration, water-quality standards, and education."
+    }
+  },
+  {
+    "id": "G04",
+    "question": "Compare the planning roles of the National Wetlands Inventory and State Wildlife Action Plans in conservation decisions.",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Distinguish the inventory's information or mapping function from the action plans' conservation-planning function with source-bound citations.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC002-C0002",
+      "DOC013-C0120",
+      "DOC034-C0063",
+      "DOC013-C0008",
+      "DOC027-C0009",
+      "DOC027-C0052"
+    ],
+    "elapsed_seconds": 9.057,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5598,
+    "chat_output_tokens": 395,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span",
+      "claim 3 lacks an explicit subject-bound source span",
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Missouri Wetland Program Plan includes updating the National Wetlands Inventory to improve data handling efficiencies for natural resource planning and risk assessment.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "MDC and other federal, state, and local agencies will systematically work on identified watersheds to incrementally develop an update to the National Wetlands Inventory (NWI) following the development of EDH to increase data handling X X X X X X efficiencies."
+          ]
+        },
+        {
+          "claim": "State Wildlife Action Plans focus on identifying species of greatest conservation need and use diverse data sources to inform proactive conservation planning at the state level.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "The wildlife action plans are building a new approach to conservation by looking beyond wildlife that is formally listed as \u201cendangered\u201d or managed as a traditional game species. ... States used a variety of information sources to identify target species, including natural heritage programs and other wildlife occurrence databases, data from other planning efforts and assessments, and input from agency biologists, academics, and other scientific experts."
+          ]
+        },
+        {
+          "claim": "State Wildlife Action Plans involve partnerships among local governments, landowners, state agencies, and NGOs to manage habitats and species through informed, directed decisions.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Texas\u2019 planning approach was developed around current and potential partnerships with multiple organizations. From local area governments and landowners to state agencies to conservation NGOs, the only viable option Texas habitats and species have is the work that is done through partnerships. ... Once this information is gathered, Texas biologists will be able to make informed, directed decisions."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Direct comparison statements between NWI and State Wildlife Action Plans",
+        "Specific examples of conservation decisions influenced by each plan",
+        "Details on how planning outputs are integrated into policy"
+      ],
+      "reason": "Sources provide specific roles of National Wetlands Inventory and State Wildlife Action Plans in planning and conservation decisions."
+    }
+  },
+  {
+    "id": "G05",
+    "question": "What outreach actions are described for reducing the movement of forest pests through transported firewood?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return firewood-pathway outreach or behavior guidance rather than unrelated boating, bait, or pet-release actions.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC032-C0028",
+      "DOC001-C0038",
+      "DOC010-C0002",
+      "DOC033-C0038",
+      "DOC001-C0040",
+      "DOC013-C0130"
+    ],
+    "elapsed_seconds": 2.785,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5661,
+    "chat_output_tokens": 170,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Nature Conservancy\u2019s Don\u2019t Move Firewood campaign promotes best practice firewood use and seeks to raise awareness about the firewood pathway both directly, and indirectly by helping partner entities improve their outreach.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "The Nature Conservancy\u2019s Don\u2019t Move Firewood campaign promotes best practice firewood use and seeks to raise awareness about the firewood pathway both directly, and indirectly by helping partner entities improve their outreach."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific outreach methods used in the Don\u2019t Move Firewood campaign",
+        "Effectiveness data of outreach actions",
+        "Details on geographic scope of outreach"
+      ],
+      "reason": "Source [S3] explicitly describes outreach actions related to the 'Don\u2019t Move Firewood' campaign to reduce forest pest movement via firewood transport."
+    }
+  },
+  {
+    "id": "G06",
+    "question": "What roles do mass-removal methods and deterrent technologies play in invasive carp management?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Cover both requested method classes and avoid claiming population outcomes that the cited research does not establish.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- Among the major accomplishments during 2017 through 2021 were the following: development of deterrent technologies (Murchy and others, 2017), mass removal methods (Chapman, 2020). [DOC012, pp. 9-10]\n- Large-scale evaluations of key deterrent technologies, such as underwater acoustic deterrent systems and systems incorporating sound, lights, and bubble screens, were initiated to manage invasive carp. [DOC012, pp. 9-10]\n- USGS provides training in mass harvest techniques and deterrent placement as part of technology transfer to management agencies for invasive carp control. [DOC012, pp. 24-25]\n- Federal funding supports proven technologies like invasive fish barriers and deterrents, including bioacoustic fish fences, gas bubble screens, and electric fences, for invasive carp management. [DOC009, pp. 5-7]",
+    "evidence_chunk_ids": [
+      "DOC012-C0003",
+      "DOC012-C0013",
+      "DOC006-C0003",
+      "DOC006-C0002",
+      "DOC005-C0009",
+      "DOC009-C0004"
+    ],
+    "elapsed_seconds": 7.326,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5736,
+    "chat_output_tokens": 535,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 falls outside the requested scope"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The USGS developed deterrent technologies and mass removal methods for invasive carp management during 2017-2021.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Among the major accomplishments during 2017 through 2021 were the following: development of deterrent technologies (Murchy and others, 2017), mass removal methods (Chapman, 2020)"
+          ]
+        },
+        {
+          "claim": "Large-scale evaluations of key deterrent technologies, such as underwater acoustic deterrent systems and systems incorporating sound, lights, and bubble screens, were initiated to manage invasive carp.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "In 2020 and 2021, we began large-scale evaluations of key deterrent technologies, such as the USGS-developed underwater acoustic deterrent system at Lock and Dam 19 on the Mississippi River near Keokuk, Iowa, and we partnered with the U.S. Fish and Wildlife Service to evaluate a deterrent system that incorporates sound, lights, and a bubble screen at Barkley Lock and Dam near Lake City, Kentucky."
+          ]
+        },
+        {
+          "claim": "USACE research supports improved operation of electric barriers and development of alternate deterrent systems to prevent Asian carp movement.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Results of these studies have improved our predictive capabilities on invasion potential, improved operation of the CSSC electric barriers, reduced O&M expenditures, provided new guidance on design and efficacy of alternate deterrent systems"
+          ]
+        },
+        {
+          "claim": "USGS provides training in mass harvest techniques and deterrent placement as part of technology transfer to management agencies for invasive carp control.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Tools might be used, for example, in sampling for early life history stages, identification of eggs and determination of egg developmental stages, the use of population and drift models, the use of eDNA for early detection, and aspects of mass harvest techniques."
+          ]
+        },
+        {
+          "claim": "Federal funding supports proven technologies like invasive fish barriers and deterrents, including bioacoustic fish fences, gas bubble screens, and electric fences, for invasive carp management.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "Appropriate funds for proven technologies like invasive fish barriers and deterrents, employing such techniques as bioacoustic fish fences, gas bubble screens and electric fences, or other appropriate technologies along with traditional physical structures"
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific effectiveness data of methods",
+        "Long-term impact assessments",
+        "Details on integration with other management strategies"
+      ],
+      "reason": "Sources explicitly describe development and evaluation of mass-removal methods and deterrent technologies as key invasive carp management tools."
+    }
+  },
+  {
+    "id": "G10",
+    "question": "How are ditches and levees modified to restore wetland hydrology and stream-floodplain connectivity in Missouri?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return the documented structural actions and their stated hydrologic or connectivity purposes, without generalizing beyond the cited sites.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC001-C0064",
+      "DOC001-C0062",
+      "DOC002-C0007",
+      "DOC002-C0003",
+      "DOC013-C0074",
+      "DOC016-C0005"
+    ],
+    "elapsed_seconds": 3.739,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6023,
+    "chat_output_tokens": 207,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "In the Horton Bottoms Natural Area, log structures were installed in the man-made ditch to stop complete drainage and restore a more natural hydrology.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "In the Horton Bottoms Natural Area, log structures were installed in the man-made ditch to stop complete drainage and restore a more natural hydrology."
+          ]
+        },
+        {
+          "claim": "A large section of flood-protection levee was removed in Unit 4 and a low floodway was installed to partially restore stream-floodplain connectivity during high water events.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "More recently, a large section of flood-protection levee was removed in Unit 4 and a low floodway was installed to partially restore stream-floodplain connectivity during high water events."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Source [S1] explicitly describes ditch and levee modifications to restore wetland hydrology and stream-floodplain connectivity in Missouri."
+    }
+  },
+  {
+    "id": "G14",
+    "question": "How did the North American Waterfowl Management Plan extend conservation across public, private, and common lands?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Explain the documented landscape and partnership approach while covering all three named land contexts.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- The North American Waterfowl Management Plan pioneered a partnership approach to conservation across public, private, and common lands. [DOC003, pp. 12-14]",
+    "evidence_chunk_ids": [
+      "DOC003-C0008",
+      "DOC003-C0012",
+      "DOC004-C0002",
+      "DOC014-C0001",
+      "DOC014-C0002",
+      "DOC026-C0002"
+    ],
+    "elapsed_seconds": 5.627,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5561,
+    "chat_output_tokens": 304,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span",
+      "claim 3 lacks an explicit subject-bound source span",
+      "claim 4 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The North American Waterfowl Management Plan pioneered a partnership approach to conservation across public, private, and common lands.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The Plan pioneered a partnership approach to conservation, which permeates all facets of Plan implementation."
+          ]
+        },
+        {
+          "claim": "The Plan's implementation involves collaboration among federal, provincial/territorial, state governments, non-governmental organizations, and private landowners.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "Each Joint Venture includes a range of partners, from federal, provincial/territorial and local governments to conservation organizations."
+          ]
+        },
+        {
+          "claim": "The Plan's success depends on partnerships that include private and community landowners, expanding beyond federal intervention.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "In some regions, these partnerships have expanded beyond waterfowl to include soil and water conservationists, land and water resource development interests, and, most importantly, private and community landowners."
+          ]
+        },
+        {
+          "claim": "The Plan's implementation is supported by public\u2013private partnerships pooling, matching, and sharing resources across sectors and countries.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "What began as an acknowledgement of fiscal realities became the foundation and motivation for an innovative way of doing business: public\u2013private partnerships."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "The evidence explicitly describes the Plan's partnership approach involving public, private, and community landowners to extend conservation across these lands."
+    }
+  }
+]

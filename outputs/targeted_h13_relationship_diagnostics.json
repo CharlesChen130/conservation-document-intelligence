@@ -1,0 +1,81 @@
+[
+  {
+    "id": "H13",
+    "question": "How do public-private partnerships support conservation work in Missouri?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Identify concrete Missouri partnership activities rather than infer benefits from agency co-mentions.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- MDC Conservation Resources supports habitat restoration teams housed within partner organizations like Pheasants Forever/Quail Forever and The Nature Conservancy to conduct habitat management on public, private, and partner lands. [DOC020, pp. 80-82]\n- MDC partners with Bass Pro Shops, Beyond the Pond, and the U.S. Army Corps of Engineers to improve fish habitat in Table Rock Lake and Bull Shoals Lake through public-private partnerships. [DOC016]",
+    "evidence_chunk_ids": [
+      "DOC020-C0028",
+      "DOC016-C0002",
+      "DOC001-C0024",
+      "DOC020-C0029",
+      "DOC013-C0075",
+      "DOC001-C0022"
+    ],
+    "elapsed_seconds": 7.755,
+    "embedding_input_tokens": 11,
+    "chat_input_tokens": 5783,
+    "chat_output_tokens": 603,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 falls outside the requested scope",
+      "claim 3 falls outside the requested scope",
+      "claim 5 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "MDC Conservation Resources supports habitat restoration teams housed within partner organizations like Pheasants Forever/Quail Forever and The Nature Conservancy to conduct habitat management on public, private, and partner lands.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The creation and expansion of habitat restoration teams housed within partner organizations, such as Pheasants Forever/Quail Forever and The Nature Conservancy, which conduct habitat management activities on high-priority public, private, and partner lands that support SGCN."
+          ]
+        },
+        {
+          "claim": "MDC uses conservation easements through partnerships with the Missouri Prairie Foundation and others to permanently protect sensitive habitats critical for species conservation.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The use of conservation easements through partnership with the Missouri Prairie Foundation and various other partners through the MDC Land Conservation Grant Program to permanently protect sensitive habitats (e.g., grasslands, wetlands, and streams) ) critical for SGCN conservation."
+          ]
+        },
+        {
+          "claim": "MDC staff secured grants and partnered with county commissions and federal agencies to replace low-water stream crossings benefiting aquatic species including threatened and endangered mussels and fish.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Through grant funding of $370,000, local staff worked in partnership with the Moniteau County Commission to replace a low-water stream crossing in the Upper Moniteau Creek Priority Watershed on Mount Vernon Road. This is the third low-water crossing that local staff have worked on with Moniteau and Cooper counties to benefit the federally endangered Topeka shiner."
+          ]
+        },
+        {
+          "claim": "MDC partners with Bass Pro Shops, Beyond the Pond, and the U.S. Army Corps of Engineers to improve fish habitat in Table Rock Lake and Bull Shoals Lake through public-private partnerships.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Bass Pro Shops partnered with Beyond the Pond, U.S. Army Corps of Engineers, and MDC to provide approximately $200,000 to improve fish habitat in Table Rock Lake and Bull Shoals Lake."
+          ]
+        },
+        {
+          "claim": "Missouri Department of Conservation engages in cooperative agreements and cost-share partnerships with organizations such as Missouri Prairie Foundation, Missouri River Bird Observatory, St. Louis Zoo\u2019s Wildcare Institute, Ducks Unlimited, and private landowners to support conservation efforts.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "Through the use of cooperative agreements and memorandums of understanding, the Department is able to engage in cost-share opportunities with partners and private citizens. Examples of these partnership agreements include providing cost-share to the Missouri Prairie Foundation (MPF) for grassland restoration and maintenance, exotic and woody species control,public outreach, as well as providing cost-share to the Missouri River Bird Observatory (MRBO) for outreach and continued effectiveness..."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe public-private partnerships supporting conservation work in Missouri through habitat restoration, funding, technical assistance, and cooperative agreements."
+    }
+  }
+]

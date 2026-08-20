@@ -1,0 +1,248 @@
+[
+  {
+    "id": "J07",
+    "question": "What examples show Missouri using easements, grants, equipment, or partnerships to conserve habitat on private land?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return concrete private-land mechanisms and bind each one to Missouri evidence.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- The use of conservation easements through partnership with the Missouri Prairie Foundation and various other partners through the MDC Land Conservation Grant Program to permanently protect sensitive habitats (e.g., grasslands, wetlands, and streams) ) critical for SGCN conservation. [DOC020, pp. 80-82]\n- To elevate the safety of timber harvesters working on MDC lands, a new personal protective equipment (PPE) cost-share program was initiated in partnership with the Missouri Forest Products Association. This program helps timber harvesters secure PPE, including hard hats, eye and ear protection, and chainsaw chaps. [DOC018]",
+    "evidence_chunk_ids": [
+      "DOC020-C0028",
+      "DOC020-C0029",
+      "DOC001-C0016",
+      "DOC001-C0023",
+      "DOC016-C0006",
+      "DOC018-C0002"
+    ],
+    "elapsed_seconds": 13.068,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5647,
+    "chat_output_tokens": 383,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span",
+      "claim 3 falls outside the requested scope"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Missouri Department of Conservation uses conservation easements through partnership with the Missouri Prairie Foundation and various other partners to permanently protect sensitive habitats on private land.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The use of conservation easements through partnership with the Missouri Prairie Foundation and various other partners through the MDC Land Conservation Grant Program to permanently protect sensitive habitats (e.g., grasslands, wetlands, and streams) ) critical for SGCN conservation."
+          ]
+        },
+        {
+          "claim": "In FY23, the majority of RAWA projects will be completed through expanded agreements, partnerships, and contracted work including habitat management on private lands.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "In FY23, the majority of RAWA projects will be completed through expanded agreements, partnerships, and contracted work."
+          ]
+        },
+        {
+          "claim": "Missouri Department of Conservation works with partner organizations and private landowners within priority geographies to implement landscape scale conservation on private working lands.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Within each of the 11 priority geographies, dedicated interdisciplinary teams continue to work with partner organizations and private landowners to implement landscape scale conservation."
+          ]
+        },
+        {
+          "claim": "The Missouri Department of Conservation has a personal protective equipment cost-share program in partnership with the Missouri Forest Products Association to help timber harvesters on private lands secure equipment for habitat management.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "To elevate the safety of timber harvesters working on MDC lands, a new personal protective equipment (PPE) cost-share program was initiated in partnership with the Missouri Forest Products Association. This program helps timber harvesters secure PPE, including hard hats, eye and ear protection, and chainsaw chaps."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe Missouri using easements, grants, equipment, and partnerships to conserve habitat on private land."
+    }
+  },
+  {
+    "id": "J12",
+    "question": "Which management practices are described for restoring Missouri grasslands, savannas, or open woodlands?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return directly documented practices such as fire, woody-vegetation control, grazing, seeding, or other habitat work.",
+    "status": "safety_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC001-C0070",
+      "DOC001-C0033",
+      "DOC016-C0006",
+      "DOC013-C0074",
+      "DOC013-C0075"
+    ],
+    "elapsed_seconds": 4.734,
+    "embedding_input_tokens": 20,
+    "chat_input_tokens": 4932,
+    "chat_output_tokens": 275,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 falls outside the requested scope",
+      "claim 2 falls outside the requested scope",
+      "claim 3 falls outside the requested scope"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Missouri State Wildlife Action Plan describes restoration and management of sand prairies including prescribed burning, seed collection, planting, and invasive species control.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Restoration and management of these habitats include prescribed burning, seed collection, planting, and invasive species control."
+          ]
+        },
+        {
+          "claim": "Missouri State Wildlife Action Plan emphasizes implementing best management practices for livestock and enhancing riparian corridors in prairie, savanna, and woodland areas.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Implementing best management practices for livestock and enhancing riparian corridor is a primary focus of this geography."
+          ]
+        },
+        {
+          "claim": "MDC Annual Review FY2024 reports organizing a glade and woodland restoration workshop and Natural Communities 101 workshop to support restoration efforts.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Department staff organized a glade and woodland restoration workshop and a Natural Communities 101 workshop with over 50 department staff participating."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific detailed protocols for restoration",
+        "Quantitative outcomes of restoration efforts",
+        "Long-term monitoring results"
+      ],
+      "reason": "Sources describe restoration and management practices including prescribed burning, seed collection, planting, invasive species control, and best management practices for livestock and riparian corridors in Missouri grasslands, savannas, and woodlands."
+    }
+  },
+  {
+    "id": "J13",
+    "question": "How do wetland programs measure extent, ecological condition, hydrology, or change over time?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Report directly documented inventory, index, monitoring, or trends methods; the alternatives need not all be present in one source.",
+    "status": "sufficiency_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC035-C0005",
+      "DOC003-C0006",
+      "DOC032-C0003",
+      "DOC027-C0008",
+      "DOC027-C0004",
+      "DOC003-C0011"
+    ],
+    "elapsed_seconds": 2.944,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5617,
+    "chat_output_tokens": 84,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": false,
+      "claims": [],
+      "missing_information": [
+        "Specific measurement methods for wetland extent",
+        "Techniques for assessing ecological condition of wetlands",
+        "Approaches to monitoring wetland hydrology",
+        "Methods to detect and quantify wetland change over time"
+      ],
+      "reason": "None of the provided sources explicitly describe specific methods or metrics used by wetland programs to measure extent, ecological condition, hydrology, or change over time."
+    }
+  },
+  {
+    "id": "J15",
+    "question": "What prevention actions address invasive-species risks from aquarium products, pet releases, aquaculture, or other aquatic trade?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Require a directly connected live-trade or release action rather than downstream pet-food use or boating evidence.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- Together, they supported public outreach initiatives like PlayCleanGo\u00ae and Clean. Drain. Dry.\u00ae, expanded access to decontamination tools, and installed boot brush stations at public recreation areas. These efforts helped to stop invasive species before they spread, protecting ecosystems, economies, and public health. [DOC007, pp. 11-13]\n- Implemented tools to prevent invasive species introductions, spread, and costly impacts Watercraft inspection and cleaning stations, watercraft decontamination dip tank pilot program, boot brush stations, vehicle wash stations, signage at recreational access points. [DOC007, pp. 9-12]\n- Beyond the federal level, state and tribal harvest programs in the southeast offer one of the most effective examples of AIS controls. In Kentucky and Tennessee, commercial fishers have been leveraged to harvest and eradicate invasive carp. Harvested carp are often turned into fertilizer or animal and pet food, forming a market-driven compensation structure supplemented by state subsidies. [DOC009, pp. 12-15]",
+    "evidence_chunk_ids": [
+      "DOC007-C0005",
+      "DOC007-C0004",
+      "DOC008-C0005",
+      "DOC008-C0004",
+      "DOC009-C0009",
+      "DOC005-C0004"
+    ],
+    "elapsed_seconds": 10.432,
+    "embedding_input_tokens": 24,
+    "chat_input_tokens": 5775,
+    "chat_output_tokens": 695,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "claim 1 falls outside the requested scope",
+      "claim 4 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "USFWS launched an immediate response involving multiple agencies resulting in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols to prevent entry of contaminated products from aquarium trade.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "USFWS launched an immediate response involving state, provincial, and federal agencies, tribes, nongovernmental organizations, and industry. This coordinated, multi-agency effort resulted in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols that prevented the entry of additional contaminated products."
+          ]
+        },
+        {
+          "claim": "DOI bureaus and partners supported public outreach initiatives like PlayCleanGo\u00ae and Clean. Drain. Dry.\u00ae, expanded access to decontamination tools, and installed boot brush stations at public recreation areas to prevent invasive species spread from aquatic trade and recreation.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Together, they supported public outreach initiatives like PlayCleanGo\u00ae and Clean. Drain. Dry.\u00ae, expanded access to decontamination tools, and installed boot brush stations at public recreation areas. These efforts helped to stop invasive species before they spread, protecting ecosystems, economies, and public health."
+          ]
+        },
+        {
+          "claim": "Biosecurity trainings for customs inspectors, watercraft inspection and cleaning stations, watercraft decontamination dip tank pilot programs, boot brush stations, vehicle wash stations, and signage at recreational access points are implemented tools to prevent invasive species introductions and spread from aquatic trade and transport.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Implemented tools to prevent invasive species introductions, spread, and costly impacts Watercraft inspection and cleaning stations, watercraft decontamination dip tank pilot program, boot brush stations, vehicle wash stations, signage at recreational access points"
+          ]
+        },
+        {
+          "claim": "Natural resource managers promote public education and outreach campaigns on AIS prevention targeting recreational fishing, boating, pet industry, and aquaculture communities, including messaging like \u201cClean, Drain, Dry\u201d and \u201cDon\u2019t Let it Loose\u201d to reduce invasive species spread from pet releases and aquatic trade.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "ANSTF should convene federal, state, regional, and tribal agencies to launch coordinated and science-based public education and outreach campaigns on AIS prevention, leaning on trusted and influential voices within recreational fishing and boating communities, the hunting community, and other relevant communities. ... Congress should provide additional funding for the appropriate agencies to expand signage and visual-textual cues, and work to address language barriers at boat launches and fishin"
+          ]
+        },
+        {
+          "claim": "State and tribal harvest programs in the southeast use commercial fishers to harvest and eradicate invasive carp, turning harvested carp into fertilizer or animal and pet food, creating a market-driven compensation structure to control aquatic invasive species from aquaculture and trade.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Beyond the federal level, state and tribal harvest programs in the southeast offer one of the most effective examples of AIS controls. In Kentucky and Tennessee, commercial fishers have been leveraged to harvest and eradicate invasive carp. Harvested carp are often turned into fertilizer or animal and pet food, forming a market-driven compensation structure supplemented by state subsidies."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Sources provide specific prevention actions addressing invasive species risks from aquarium products, pet releases, aquaculture, and aquatic trade."
+    }
+  }
+]

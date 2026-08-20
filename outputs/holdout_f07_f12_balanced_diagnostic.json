@@ -1,0 +1,145 @@
+[
+  {
+    "id": "F07",
+    "question": "Compare the roles of eDNA and acoustic telemetry in invasive carp detection and tracking.",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Distinguish what each technique measures or enables and avoid transferring claims between methods.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC005-C0011",
+      "DOC012-C0010",
+      "DOC012-C0013",
+      "DOC005-C0009",
+      "DOC015-C0002",
+      "DOC007-C0007"
+    ],
+    "elapsed_seconds": 5.911,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 5823,
+    "chat_output_tokens": 272,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The USGS Invasive Carp Strategic Science Plan states that eDNA is used for early detection and surveillance of invasive carp.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "The USGS will continue to develop new tools and improve the utility of available surveillance and early detection tools, such as eDNA and integration of eDNA detection into streamgage networks using automated sampling and analysis equipment."
+          ]
+        },
+        {
+          "claim": "Acoustic telemetry is used to locate invasive carp and study their movements and habitat relations to improve removal methods.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "We will continue to advance understanding of natural aggregations using acoustic methods of locating fish, and studying their relations to habitat variables, such as water temperature, velocity, and food availability."
+          ]
+        },
+        {
+          "claim": "Acoustic tagging and telemetry are used to monitor locations and movements of invasive fish species including carp in Washington DC waters.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Acoustic tagging and telemetry are in use for all three fish species to monitor their locations and movement in these waters in and around Washington DC."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Detailed comparison of effectiveness",
+        "Specific limitations of each method",
+        "Quantitative performance metrics"
+      ],
+      "reason": "Sources explicitly describe eDNA for early detection and acoustic telemetry for tracking invasive carp movements."
+    }
+  },
+  {
+    "id": "F12",
+    "question": "What actions are described for reducing invasive-species spread through bait, aquaculture, aquarium pets, or other live-organism trade?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Retrieve trade- or release-pathway prevention actions instead of relying only on boating evidence.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- USFWS launched an immediate response involving state, provincial, and federal agencies, tribes, nongovernmental organizations, and industry. This coordinated, multi-agency effort resulted in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols that prevented the entry of additional contaminated products. [DOC007, pp. 11-13]\n- In Kentucky and Tennessee, commercial fishers have been leveraged to harvest and eradicate invasive carp. Harvested carp are often turned into fertilizer or animal and pet food, forming a market-driven compensation structure supplemented by state subsidies. [DOC009, pp. 12-15]",
+    "evidence_chunk_ids": [
+      "DOC007-C0005",
+      "DOC005-C0004",
+      "DOC009-C0009",
+      "DOC007-C0004",
+      "DOC008-C0005",
+      "DOC009-C0008"
+    ],
+    "elapsed_seconds": 17.037,
+    "embedding_input_tokens": 28,
+    "chat_input_tokens": 5692,
+    "chat_output_tokens": 640,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 falls outside the requested scope",
+      "claim 3 falls outside the requested scope",
+      "claim 4 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "USFWS launched a multi-agency response to zebra mussels found on Marimo moss balls sold in pet stores, resulting in decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "USFWS launched an immediate response involving state, provincial, and federal agencies, tribes, nongovernmental organizations, and industry. This coordinated, multi-agency effort resulted in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols that prevented the entry of additional contaminated products."
+          ]
+        },
+        {
+          "claim": "The Nationally Coordinated Invasive Species Prevention Memorandum of Understanding supports public outreach initiatives like PlayCleanGo\u00ae and Clean. Drain. Dry.\u00ae, expands access to decontamination tools, and installs boot brush stations at public recreation areas to prevent invasive species spread.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Together, they supported public outreach initiatives like PlayCleanGo\u00ae and Clean. Drain. Dry.\u00ae, expanded access to decontamination tools, and installed boot brush stations at public recreation areas. These efforts helped to stop invasive species before they spread, protecting ecosystems, economies, and public health."
+          ]
+        },
+        {
+          "claim": "Aquatic invasive species are introduced and spread through trade involving live organisms such as live bait, aquarium pets, water gardening, live seafood, and biological supplier trade.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Aquatic invasive species have been and continue to be introduced to the Chesapeake Bay watershed by multiple routes, including ... trade involving live organisms (live bait, aquarium pets, water gardening, live seafood, biological supplier trade);"
+          ]
+        },
+        {
+          "claim": "Federal, state, regional, and tribal agencies should launch coordinated and science-based public education and outreach campaigns on AIS prevention, engaging recreational fishing, boating, pet industry, and aquaculture communities to reduce spread.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Natural resource managers at the federal, state, regional, and tribal levels should seek to engage and elevate trusted voices among recreational user groups, hunters, anglers, the pet industry, aquaculture, and other industries and communities that may serve as vectors for AIS introduction and spread. ANSTF should convene federal, state, regional, and tribal agencies to launch coordinated and science-based public education and outreach campaigns on AIS prevention, leaning on trusted and influen-"
+          ]
+        },
+        {
+          "claim": "State and tribal harvest programs in the southeast use commercial fishers to harvest invasive carp, turning harvested carp into fertilizer or animal and pet food, creating a market-driven compensation structure to control AIS spread.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "In Kentucky and Tennessee, commercial fishers have been leveraged to harvest and eradicate invasive carp. Harvested carp are often turned into fertilizer or animal and pet food, forming a market-driven compensation structure supplemented by state subsidies."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe specific actions to reduce invasive species spread via bait, aquaculture, aquarium pets, and live-organism trade."
+    }
+  }
+]

@@ -1,0 +1,327 @@
+# Technical Implementation Report
+
+## Document control
+
+| Field | Value |
+|---|---|
+| System | Conservation Document Intelligence |
+| Version | 1.0 |
+| Date | August 20, 2026 |
+| Primary entrypoint | `app.py` |
+| Requirements baseline | `Document_Intelligence_Project_Description.docx` and `Hugging_Face_Spaces_Deployment_Guide_Conservation_Prototype.docx` |
+
+## 1. Executive summary
+
+Conservation Document Intelligence is a reproducible research prototype for exploring a fixed corpus of 35 public conservation sources. It combines a traceable source catalog, page-aware text extraction, keyword and semantic retrieval, deterministic entity and relationship extraction, an evidence-backed wiki, and an OpenAI-assisted chatbot whose output is checked against retrieved evidence before it is shown.
+
+The deployed application reads versioned runtime artifacts. It does not download documents, extract text, or rebuild indexes during normal startup. Corpus browsing, keyword search, wiki browsing, and saved evaluation reports work without an API key. Semantic queries and live chatbot answers require `OPENAI_API_KEY`.
+
+The implementation satisfies the functional outcomes in the project description and received a provisional document-rubric self-score of 95/100. The official 10-question demonstration passes 10/10, and the H, F, and G known regression suites each replay with 20/20 expected behavior. The final untouched J holdout scored 11 PASS, 4 PARTIAL, and 5 FAIL. Therefore, the application is suitable for transparent research demonstration but is not represented as production-ready or independently validated conservation decision support.
+
+## 2. Requirements interpretation and approved hosting change
+
+The two supplied DOCX files were treated as the requirements source of truth. Required outcomes were converted into implementation phases and acceptance gates covering:
+
+- a traceable 35-source conservation corpus;
+- page-aware extraction and search;
+- typed entities and five required relationship types;
+- at least 10 evidence-backed wiki pages;
+- a five-tab Streamlit application;
+- a corpus-grounded chatbot with source and page citations;
+- evaluation using the 10 official questions and the supplied rubric; and
+- deployable packaging with protected credentials.
+
+The original deployment guide targeted a Docker-based Hugging Face Space. The project owner later selected Streamlit Community Cloud because paid Docker hosting was not desired. This is an approved hosting-adapter change. It does not alter the data pipeline, retrieval logic, knowledge layer, chatbot controls, evaluation artifacts, or user-facing capabilities. The Dockerfile remains available as an optional packaging route.
+
+## 3. System architecture
+
+```mermaid
+flowchart LR
+    A[35-source metadata catalog] --> B[Acquisition and provenance]
+    B --> C[Page-aware extraction]
+    C --> D[Deterministic chunking]
+    D --> E[(SQLite and FTS5)]
+    D --> F[(FAISS semantic index)]
+    E --> G[Entity and relation extraction]
+    G --> H[Evidence-backed wiki]
+    E --> I[Retrieval and answer service]
+    F --> I
+    H --> I
+    I --> J[Grounding and citation validation]
+    J --> K[Streamlit application]
+```
+
+The system has two execution modes:
+
+1. **Offline build mode:** numbered scripts acquire and process sources, build indexes, extract knowledge, generate wiki pages, and produce evaluation artifacts.
+2. **Runtime mode:** the Streamlit app opens the precomputed SQLite database, FAISS index, wiki, and reports. Only query embeddings and chatbot generation call the OpenAI API.
+
+This separation makes startup deterministic, reduces cloud cost, and prevents deployment failures caused by unavailable external source websites.
+
+## 4. Implementation details
+
+### 4.1 Repository organization
+
+| Path | Responsibility |
+|---|---|
+| `app.py` | Streamlit user interface and runtime composition |
+| `config.yaml` | Chunking, retrieval, model, and chatbot defaults |
+| `data/metadata.csv` | Canonical 35-source catalog and provenance |
+| `db/conservation.db` | Runtime SQLite corpus, FTS index, entities, relations, and wiki registry |
+| `vector_index/` | Persisted FAISS index and corpus manifest |
+| `wiki/` | Generated, reviewable Markdown wiki pages |
+| `src/conservation_intelligence/` | Testable acquisition, extraction, retrieval, knowledge, wiki, and chatbot services |
+| `scripts/` | Reproducible pipeline, evaluation, and validation commands |
+| `outputs/` | Evaluation results, exports, audits, and status reports |
+| `tests/` | Unit, integration, artifact, regression, and Streamlit smoke tests |
+
+All runtime paths are resolved relative to the project root. Machine-specific absolute paths are not embedded in the application.
+
+### 4.2 Corpus catalog and acquisition
+
+The catalog contains exactly `DOC001` through `DOC035`. Each record preserves the original URL and, where needed, the resolved or replacement URL. It also records agency, topic, file type, acquisition status, retrieval time, checksum, extraction status, page count, and explanatory notes.
+
+Acquisition uses resumable HTTP requests with retries, timeouts, content-type checks, deterministic filenames, and SHA-256 checksums. Broken or indirect sources are not silently removed. Replacements are documented in `data/source_replacements.csv` while preserving the intended agency and topic.
+
+Raw downloads and extracted page files are build-time artifacts and are excluded from the deployment repository. Their derived runtime content is stored in the versioned SQLite database.
+
+### 4.3 Text extraction and chunking
+
+PDF extraction uses `pypdf` page by page. HTML sources are cleaned with Beautiful Soup. Normalized text retains stable page markers so every chunk can be traced to a document and page or page range.
+
+Chunking is deterministic and does not cross document boundaries. Current configuration is:
+
+| Setting | Value |
+|---|---:|
+| Target words | 750 |
+| Minimum words | 600 |
+| Maximum words | 900 |
+| Overlap | 100 words |
+| Stored chunks | 724 |
+
+Every chunk has a stable ID, document ID, page value, text, title, source URL, word count, and content hash.
+
+### 4.4 SQLite and keyword retrieval
+
+SQLite is the canonical runtime store. Its schema contains:
+
+- `documents` for source metadata;
+- `chunks` for page-aware evidence;
+- `entities` for typed mentions;
+- `relations` for evidence-linked relationships;
+- `wiki_pages` for generated page registration;
+- `pipeline_runs` for processing status; and
+- `chunks_fts`, an FTS5 virtual table for keyword retrieval.
+
+FTS5 uses Porter stemming with Unicode tokenization. Search queries are normalized before execution, and results return the chunk ID, document ID, page, title, source URL, text, and rank. Retrieval utilities also remove low-information fragments, diversify documents, load exact wiki evidence, and recover neighboring chunks when evidence crosses a chunk boundary.
+
+### 4.5 Semantic retrieval
+
+The semantic index uses OpenAI `text-embedding-3-small` embeddings and a persisted FAISS `IndexFlatIP` index. Vectors are L2-normalized, making inner-product search equivalent to cosine similarity. Current index characteristics are:
+
+| Property | Value |
+|---|---:|
+| Vectors | 724 |
+| Dimensions | 1,536 |
+| Index file | Approximately 4.3 MB |
+| Corpus database | Approximately 14 MB |
+
+The manifest stores the embedding model, ordered chunk IDs, vector dimensions, build time, chunk count, and a digest derived from every chunk ID and content hash. Semantic search is automatically disabled if the manifest does not match the current corpus or if the configured embedding model differs.
+
+### 4.6 Entity and relationship extraction
+
+The knowledge layer is deterministic and audit-oriented. A curated YAML lexicon provides canonical names and aliases. Regular expressions and explicit linguistic patterns extract mentions and relationships only when suitable evidence is present.
+
+Supported entity types are:
+
+- species;
+- habitat;
+- river;
+- wetland;
+- agency;
+- location;
+- threat;
+- program;
+- policy; and
+- date.
+
+Required relationship types are:
+
+- `species_uses_habitat`;
+- `threat_affects_species`;
+- `agency_manages_program`;
+- `document_mentions_location`; and
+- `document_mentions_species`.
+
+Stable entity and relation IDs are derived from SHA-256 inputs. Every record includes its document, chunk, evidence text, and confidence. Evidence-quality filters reject bibliography-like, navigation-like, or otherwise unsuitable fragments before relationship creation.
+
+The current knowledge layer contains 6,795 entity mentions and 987 high-precision relations. The relation audit reports 987/987 integrity checks and 37/37 manually reviewed rows passing.
+
+### 4.7 Evidence-backed wiki
+
+The wiki generator ranks entities using evidence quality, mention frequency, and source diversity. It creates reviewable Markdown rather than generating pages dynamically at runtime.
+
+The current wiki contains 15 pages distributed across:
+
+- species;
+- habitats;
+- locations;
+- threats; and
+- agencies.
+
+Pages include cited facts, supporting evidence, related documents, related entities, and open questions where applicable. Citation and link validators check each generated page. The current audit reports 44/44 facts traceable to stored evidence and 84/84 internal links resolving.
+
+### 4.8 Chatbot retrieval and answer control
+
+The production chatbot follows a guarded retrieval-augmented generation pipeline:
+
+1. Normalize and validate the question.
+2. Reject empty questions, questions over 1,000 characters, corpus-bypass requests, and restricted privacy-scope requests.
+3. Route supported inventory, frequency, gap, summary, and corroboration questions to deterministic handlers where appropriate.
+4. Retrieve keyword candidates from SQLite FTS5.
+5. Decompose comparisons and alternative branches into supplemental retrieval queries.
+6. When a current index and API key are available, retrieve semantic candidates.
+7. Fuse independent rankings using reciprocal-rank fusion.
+8. Add relevant neighboring chunks and remove low-information evidence.
+9. Rank by question-scope coverage and choose facet-balanced evidence, normally six chunks with no more than two per document.
+10. Reject the question before generation when retrieved evidence does not cover required scope.
+11. Make one structured OpenAI Responses API call requesting a sufficiency decision and up to five atomic claims.
+12. Require every claim to provide one authorized source label and an exact supporting span.
+13. Repair label collisions and narrow invalid ellipses without making another model call.
+14. Remove invalid claims; require surviving claims to cover mandatory question facets.
+15. Resolve internal labels to citations such as `[DOC012, p. 5]`.
+16. Run final citation, claim-support, numeric-copying, scope, and formatting checks.
+17. Return an extractive fallback or the explicit insufficient-evidence response if validation cannot establish support.
+
+The normal supported path uses one query-embedding call and at most one chat-model call. Defaults are `gpt-4.1-mini`, six evidence items, 20 retrieval candidates, and 1,000 output tokens. The UI additionally limits each browser session to 20 chatbot questions.
+
+This architecture intentionally prefers a supported abstention over an unsupported answer. The final holdout shows that this safety choice still produces false abstentions on some answerable paraphrases.
+
+### 4.9 Streamlit application
+
+The interface provides five required tabs:
+
+| Tab | Function |
+|---|---|
+| Corpus | Browse and filter the 35-source catalog and open original sources |
+| Search | Run keyword or semantic retrieval and inspect page-aware snippets |
+| Wiki | Browse the 15 generated knowledge pages |
+| Chatbot | Ask grounded questions, view citations, and expand retrieved evidence |
+| Evaluation | Inspect corpus metrics, suggested questions, saved reports, and feedback link |
+
+The app starts in reduced mode without `OPENAI_API_KEY`. Corpus browsing, keyword retrieval, the wiki, and saved evaluation remain available; semantic queries and live chatbot input are disabled or report missing configuration clearly.
+
+### 4.10 Configuration and secrets
+
+Non-secret defaults are stored in `config.yaml`. Local development reads `.env` through `python-dotenv` without overriding already-exported environment variables.
+
+The following runtime settings are supported:
+
+| Setting | Required | Purpose |
+|---|---|---|
+| `OPENAI_API_KEY` | For semantic queries and chatbot | OpenAI authentication |
+| `OPENAI_CHAT_MODEL` | No | Override `gpt-4.1-mini` |
+| `OPENAI_EMBEDDING_MODEL` | No | Override `text-embedding-3-small` |
+| `FEEDBACK_FORM_URL` | No | External evaluation survey |
+| `VECTOR_STORE_ID` | No | Reserved for an optional hosted retrieval adapter |
+
+`.env` and `.streamlit/secrets.toml` are excluded from Git. Streamlit Cloud secrets must be entered as root-level TOML so the existing code can read them as environment variables.
+
+## 5. Quality assurance and evaluation
+
+### 5.1 Automated verification
+
+The current suite contains 139 passing tests. Coverage includes:
+
+- catalog completeness and metadata validation;
+- acquisition, extraction, and chunking behavior;
+- database and FTS integrity;
+- semantic-index currency and dimension checks;
+- entity and relationship evidence;
+- wiki structure, facts, citations, and links;
+- chatbot scope, retrieval, claim, citation, abstention, and adversarial behavior;
+- evaluation artifact integrity;
+- Streamlit rendering of all five tabs; and
+- Streamlit Cloud deployment artifacts and secret exclusions.
+
+The local server smoke test returned `ok` from `/_stcore/health` and HTTP 200 from the main page.
+
+### 5.2 Evaluation results
+
+| Evaluation set | Result | Interpretation |
+|---|---:|---|
+| Official document questions | 10 PASS / 0 PARTIAL / 0 FAIL | Required demonstration; questions informed development |
+| H known regression | 20/20 expected behavior | Post-repair regression evidence |
+| F known regression | 20/20 expected behavior | Post-repair regression evidence |
+| G known regression | 20/20 expected behavior | Post-repair regression evidence |
+| Final untouched J holdout | 11 PASS / 4 PARTIAL / 5 FAIL | Independent generalization evidence; internal gate failed |
+
+The final J set found five answerable questions that were rejected after usable evidence had been retrieved, plus four answers containing cited but semantically adjacent material. This confirms that post-generation scope and coverage validation, rather than basic source retrieval, is the main remaining quality limitation.
+
+### 5.3 Document rubric
+
+| Category | Score |
+|---|---:|
+| Corpus and metadata | 20/20 |
+| Search and retrieval | 19/20 |
+| Entity and relation extraction | 18/20 |
+| LLM wiki | 18/20 |
+| Chatbot and demonstration | 20/20 |
+| **Total** | **95/100** |
+
+This is a provisional internal self-score, not independent conservation-domain certification.
+
+## 6. Security, privacy, and cost controls
+
+- Credentials are read only from runtime secrets or local environment configuration.
+- The OpenAI key is never rendered in the interface.
+- Retrieved source text is treated as untrusted data in the answer prompt.
+- Source labels are allow-listed and resolved only to retrieved corpus records.
+- Questions are sent to OpenAI for live query embeddings; questions and selected public-corpus evidence are sent for answer generation. Users should not enter confidential or personal information.
+- A 1,000-character question limit, 1,000-token answer limit, single structured model call, zero automatic OpenAI retries, and 20-question session cap constrain cost.
+- A public Streamlit app can create charges against the owner's OpenAI project. Provider-side project budgets and monitoring remain necessary.
+
+## 7. Deployment and operations
+
+The selected deployment is Streamlit Community Cloud connected to the private GitHub repository `CharlesChen130/conservation-document-intelligence`.
+
+Deployment parameters are:
+
+- branch: `main`;
+- entrypoint: `app.py`;
+- Python: 3.12;
+- dependencies: `requirements.txt`; and
+- secret: root-level `OPENAI_API_KEY` in Streamlit's Secrets console.
+
+The runtime database, FAISS index, wiki, and evaluation reports are committed. Raw documents and extracted build files are not required at startup. Updates are deployed by pushing a reviewed commit to GitHub. Rollback uses a prior known-good Git commit.
+
+Community Cloud can hibernate after inactivity. A restart loses browser session history but retains the versioned corpus and index.
+
+## 8. Known limitations
+
+- The final untouched holdout did not pass the internal generalization gate.
+- The finite rule-based entity lexicon prioritizes precision over recall.
+- Four wiki pages contain one publishable fact rather than lower-quality filler.
+- Search snippets may start before the exact supporting sentence in a long chunk.
+- Model and embedding behavior can change when provider models change.
+- The application has no cross-user conversation persistence.
+- Streamlit session limits are not a global rate limiter; a public deployment still requires provider-side spending controls.
+- No independent conservation-domain expert has certified the entity layer, wiki, or answers.
+- The prototype must not be used as the sole basis for consequential conservation, legal, financial, or policy decisions.
+
+## 9. Requirements traceability
+
+| Required outcome | Implementation evidence |
+|---|---|
+| Organized public conservation corpus | `data/metadata.csv` and 35 document records |
+| Searchable documents | SQLite FTS5 and FAISS over 724 page-aware chunks |
+| Structured entities and relations | 6,795 mentions, 987 evidence-linked relations, five required relation types |
+| Evidence-backed wiki | 15 Markdown pages, 44 validated facts, 84 valid links |
+| Cited chatbot | Structured Responses API output plus deterministic claim and citation validation |
+| Evaluation questions and rubric | `outputs/demo_answers.md`, correctness audits, holdouts, and `outputs/requirements_evaluation.md` |
+| Deployable interface | Five-tab `app.py`, pinned dependencies, persisted artifacts, Streamlit deployment guide |
+| Secret protection | `.gitignore`, `.env.example`, and Streamlit Secrets workflow |
+
+## 10. Conclusion
+
+The system implements the required conservation-document intelligence workflow end to end and is reproducible from versioned runtime artifacts. Its strongest properties are provenance, inspectable evidence, deterministic knowledge artifacts, citation enforcement, and explicit abstention. Its principal unresolved weakness is generalization of the scope and coverage validator to unseen paraphrases. Deployment is therefore appropriate for research demonstration and user evaluation with clear limitations, not for authoritative decision support.

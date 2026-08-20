@@ -1,0 +1,236 @@
+[
+  {
+    "number": 1,
+    "id": "G01",
+    "elapsed_seconds": 8.912,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 7627,
+    "chat_output_tokens": 506,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 lacks entity-bound requested method evidence",
+      "claim 5 lacks an explicit subject-bound source span",
+      "claim 5 lacks entity-bound requested method evidence"
+    ]
+  },
+  {
+    "number": 2,
+    "id": "G02",
+    "elapsed_seconds": 6.859,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5321,
+    "chat_output_tokens": 461,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 3,
+    "id": "G03",
+    "elapsed_seconds": 15.061,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 5464,
+    "chat_output_tokens": 403,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 4,
+    "id": "G04",
+    "elapsed_seconds": 15.691,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5629,
+    "chat_output_tokens": 624,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 5,
+    "id": "G05",
+    "elapsed_seconds": 2.39,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5662,
+    "chat_output_tokens": 132,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 6,
+    "id": "G06",
+    "elapsed_seconds": 7.308,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5736,
+    "chat_output_tokens": 559,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 falls outside the requested scope",
+      "claim 4 falls outside the requested scope"
+    ]
+  },
+  {
+    "number": 7,
+    "id": "G07",
+    "elapsed_seconds": 6.906,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 5509,
+    "chat_output_tokens": 453,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 8,
+    "id": "G08",
+    "elapsed_seconds": 7.498,
+    "embedding_input_tokens": 20,
+    "chat_input_tokens": 5462,
+    "chat_output_tokens": 514,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 lacks an explicit subject-bound source span",
+      "claim 5 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 9,
+    "id": "G09",
+    "elapsed_seconds": 8.449,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 7527,
+    "chat_output_tokens": 494,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 10,
+    "id": "G10",
+    "elapsed_seconds": 5.312,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6021,
+    "chat_output_tokens": 322,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 11,
+    "id": "G11",
+    "elapsed_seconds": 4.781,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5427,
+    "chat_output_tokens": 345,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 12,
+    "id": "G12",
+    "elapsed_seconds": 6.915,
+    "embedding_input_tokens": 25,
+    "chat_input_tokens": 6176,
+    "chat_output_tokens": 476,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 13,
+    "id": "G13",
+    "elapsed_seconds": 5.478,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5805,
+    "chat_output_tokens": 312,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 14,
+    "id": "G14",
+    "elapsed_seconds": 4.841,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5561,
+    "chat_output_tokens": 394,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 15,
+    "id": "G15",
+    "elapsed_seconds": 0.007,
+    "embedding_input_tokens": 0,
+    "chat_input_tokens": 0,
+    "chat_output_tokens": 0,
+    "response_status": "",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 16,
+    "id": "G16",
+    "elapsed_seconds": 0.008,
+    "embedding_input_tokens": 0,
+    "chat_input_tokens": 0,
+    "chat_output_tokens": 0,
+    "response_status": "",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 17,
+    "id": "G17",
+    "elapsed_seconds": 2.111,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6227,
+    "chat_output_tokens": 83,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 18,
+    "id": "G18",
+    "elapsed_seconds": 2.814,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 6082,
+    "chat_output_tokens": 65,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 19,
+    "id": "G19",
+    "elapsed_seconds": 2.744,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 5990,
+    "chat_output_tokens": 54,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 20,
+    "id": "G20",
+    "elapsed_seconds": 1.778,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5534,
+    "chat_output_tokens": 59,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  }
+]

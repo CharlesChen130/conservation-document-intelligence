@@ -1,0 +1,134 @@
+[
+  {
+    "id": "G02",
+    "question": "How does Missouri's wetland program combine monitoring, regulation, voluntary restoration, water-quality standards, and education?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Cover the named program elements from Missouri evidence while keeping documented goals separate from completed outcomes.",
+    "status": "structured_generated_narrowed",
+    "answer": "The retrieved evidence supports:\n\n- The Missouri Wetland Program Plan includes monitoring and assessment activities involving multiple agencies to promote scientific knowledge about wetlands. [DOC002, pp. 1-3]\n- The Missouri Wetland Program Plan addresses regulation through avoidance, minimization, and mitigation of permanent impacts to wetlands by federal and state agencies. [DOC002, pp. 1-3]\n- The Missouri Wetland Program Plan promotes voluntary restoration and protection of wetlands through incentives and assistance provided by private and governmental entities. [DOC002, pp. 1-3]\n- The department\u2019s Environmental Services Program (ESP) will collect wetland-specific water quality data to aid in the establishment of water quality standards. [DOC002, pp. 16-20]\n- The department participates in webinars hosted by NAWM, NRCS, TNC, USFWS, and other entities for continuing education and training in wetland sciences and issues. [DOC002, pp. 16-20]",
+    "evidence_chunk_ids": [
+      "DOC002-C0001",
+      "DOC020-C0011",
+      "DOC002-C0008",
+      "DOC032-C0028",
+      "DOC023-C0001",
+      "DOC018-C0006"
+    ],
+    "elapsed_seconds": 8.109,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5321,
+    "chat_output_tokens": 476,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Missouri Wetland Program Plan includes monitoring and assessment activities involving multiple agencies to promote scientific knowledge about wetlands.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Universities and other agencies help monitor and promote scientific knowledge about wetlands and their rare or endangered inhabitants."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan addresses regulation through avoidance, minimization, and mitigation of permanent impacts to wetlands by federal and state agencies.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Some of these agencies regulate impacts to wetlands to protect habitats and aquatic resource functions through avoidance, minimization, and mitigation of permanent impacts."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan promotes voluntary restoration and protection of wetlands through incentives and assistance provided by private and governmental entities.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Other entities, both private and governmental, provide incentives and assistance for restoring wetlands."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan develops wetland-specific water quality standards including numeric criteria, narrative criteria, designated uses, and anti-degradation policies.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "The department\u2019s Environmental Services Program (ESP) will collect wetland-specific water quality data to aid in the establishment of water quality standards. ... Develop wetland-specific narrative criteria. ... Develop wetland-specific numeric criteria. ... Establish and revise designated uses for wetland water quality. ... Develop wetland anti-degradation policy."
+          ]
+        },
+        {
+          "claim": "The Missouri Wetland Program Plan incorporates education through outreach, training, workshops, webinars, and public engagement to promote wetland conservation and awareness.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Develop educational strategies that provide state resource managers and citizens with information to conserve and promote wetland resources in Missouri. ... Participate in meetings, workshops and outreach activities with interested parties to promote wetland resources. ... The department participates in webinars hosted by NAWM, NRCS, TNC, USFWS, and other entities for continuing education and training in wetland sciences and issues. ... MDC will work to maintain or increase the number of Missour"
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "The Missouri Wetland Program Plan [S1, S3] explicitly details how the program integrates monitoring, regulation, voluntary restoration, water-quality standards, and education."
+    }
+  },
+  {
+    "id": "G10",
+    "question": "How are ditches and levees modified to restore wetland hydrology and stream-floodplain connectivity in Missouri?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return the documented structural actions and their stated hydrologic or connectivity purposes, without generalizing beyond the cited sites.",
+    "status": "structured_generated",
+    "answer": "The retrieved evidence supports:\n\n- In the Horton Bottoms Natural Area, log structures were installed in the man-made ditch to stop complete drainage and restore a more natural hydrology. [DOC001, pp. 152-157]\n- More recently, a large section of flood-protection levee was removed in Unit 4 and a low floodway was installed to partially restore stream-floodplain connectivity during high water events. [DOC001, pp. 152-157]\n- In coming phases at Schell-Osage Conservation Area, wetland levees will be redesigned and rebuilt at angles more in line with natural hydrology, using natural high points as anchors and built with natural contours less prone to damage from flowing floodwater. [DOC016]",
+    "evidence_chunk_ids": [
+      "DOC001-C0064",
+      "DOC001-C0062",
+      "DOC002-C0007",
+      "DOC002-C0003",
+      "DOC013-C0074",
+      "DOC016-C0005"
+    ],
+    "elapsed_seconds": 6.568,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6021,
+    "chat_output_tokens": 322,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "In the Horton Bottoms Natural Area, log structures were installed in the man-made ditch to stop complete drainage and restore a more natural hydrology.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "In the Horton Bottoms Natural Area, log structures were installed in the man-made ditch to stop complete drainage and restore a more natural hydrology."
+          ]
+        },
+        {
+          "claim": "A large section of flood-protection levee was removed in Unit 4 and a low floodway was installed to partially restore stream-floodplain connectivity during high water events.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "More recently, a large section of flood-protection levee was removed in Unit 4 and a low floodway was installed to partially restore stream-floodplain connectivity during high water events."
+          ]
+        },
+        {
+          "claim": "In coming phases at Schell-Osage Conservation Area, wetland levees will be redesigned and rebuilt at angles more in line with natural hydrology, using natural high points as anchors and built with natural contours less prone to damage from flowing floodwater.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "In coming phases, a redesign and rebuild of wetland levees will be at angles more in line with natural hydrology. They will use natural high points as anchors and be built with natural contours less prone to damage from flowing floodwater."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Source [S1] explicitly describes ditch and levee modifications to restore wetland hydrology and stream-floodplain connectivity in Missouri."
+    }
+  }
+]

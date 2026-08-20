@@ -1,0 +1,73 @@
+[
+  {
+    "id": "F14",
+    "question": "What role do Conservation Opportunity Areas play in Missouri wildlife planning?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Explain the documented planning or prioritization role of Conservation Opportunity Areas in Missouri.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- Missouri\u2019s Comprehensive Wildlife Strategy promotes management that benefits all wildlife, rather than targeting single species. The strategy identifies 33 Conservation Opportunity Areas in which management strategies will conserve both wildlife populations and the natural systems on which they depend. [DOC013, pp. 139-141]",
+    "evidence_chunk_ids": [
+      "DOC001-C0015",
+      "DOC001-C0021",
+      "DOC013-C0075",
+      "DOC013-C0076",
+      "DOC018-C0002",
+      "DOC017-C0003"
+    ],
+    "elapsed_seconds": 6.968,
+    "embedding_input_tokens": 12,
+    "chat_input_tokens": 5638,
+    "chat_output_tokens": 519,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "claim 2 lacks an explicit subject-bound source span",
+      "claim 2 contains numbers absent from its supporting span: 2005",
+      "claim 4 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Missouri State Wildlife Action Plan identifies Conservation Opportunity Areas for each primary habitat system using professional knowledge and GIS prioritization to represent the greatest opportunities for sustainable conservation of fish, forest, and wildlife resources in Missouri.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Conservation Opportunity Areas were identified for each of the primary habitat systems using both professional knowledge and GIS prioritization.... Figure 3, 2015 State Wildlife Action Plan Conservation Opportunity Areas, on page 31, is a combination of all team and partner inputs, and represents the greatest opportunities for sustainable conservation of fish, forest, and wildlife resources for all habitat systems within Missouri."
+          ]
+        },
+        {
+          "claim": "The Conservation Opportunity Areas in Missouri were initially identified in the 2005 Comprehensive Wildlife Conservation Strategy to support and conserve viable populations of all wildlife and their habitat systems, based on Department and partner priorities.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "The CWCS used all the information acquired in the prior 30 years to identify a set of Conservation Opportunity Areas (COAs) to support and conserve viable populations of all wildlife and the habitat systems on which they depend.... The COAs were identified based on Department and partner priorities."
+          ]
+        },
+        {
+          "claim": "Missouri\u2019s Comprehensive Wildlife Strategy promotes management in 33 Conservation Opportunity Areas where management strategies conserve both wildlife populations and the natural systems on which they depend.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Missouri\u2019s Comprehensive Wildlife Strategy promotes management that benefits all wildlife, rather than targeting single species. The strategy identifies 33 Conservation Opportunity Areas in which management strategies will conserve both wildlife populations and the natural systems on which they depend."
+          ]
+        },
+        {
+          "claim": "Conservation Opportunity Areas in Missouri were identified through a collaborative process involving the Missouri Department of Conservation and a broad coalition of conservation partners who developed criteria, held stakeholder meetings, and produced area profiles to guide conservation efforts.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "The Missouri Department of Conservation worked with selected conservation partners to develop criteria for evaluating and identifying priority conservation opportunities.... a broad coalition of conservation partners participated in a Conservation Landscapes Meeting to identify and select Conservation Opportunity Areas.... The Department facilitated 37 stakeholder meetings across the state.... The Department took the results of the stakeholder meetings and prepared draft Conservation Opportunity"
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Sources [S1], [S2], [S3], and [S4] explicitly describe Conservation Opportunity Areas (COAs) as key planning units identified to prioritize habitat conservation and wildlife management in Missouri."
+    }
+  }
+]

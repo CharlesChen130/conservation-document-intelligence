@@ -1,0 +1,72 @@
+[
+  {
+    "id": "H15",
+    "question": "Which source explains the mission and services of the National Wetlands Inventory, and what services are listed?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Identify the correct source and summarize only services supported by its retrieved text.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC002-C0002",
+      "DOC022-C0001",
+      "DOC022-C0002",
+      "DOC027-C0010",
+      "DOC027-C0038",
+      "DOC031-C0010",
+      "DOC002-C0003",
+      "DOC018-C0006"
+    ],
+    "elapsed_seconds": 6.506,
+    "embedding_input_tokens": 20,
+    "chat_input_tokens": 7737,
+    "chat_output_tokens": 412,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "USFWS National Wetlands Inventory produces and distributes maps and other geospatial data on American wetland and deepwater habitats, and monitors changes in these habitats through time.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "We produce and distribute maps and other geospatial data on American wetland and deepwater habitats, as well as monitor changes in these habitats through time."
+          ]
+        },
+        {
+          "claim": "USFWS National Wetlands Inventory provides information to the public through the Wetlands Geospatial Dataset and Wetlands Status and Trends reports.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "This information is available to the public through two resources: the Wetlands Geospatial Dataset and Wetlands Status and Trends reports."
+          ]
+        },
+        {
+          "claim": "The Wetlands Mapper fulfills the U.S. Fish and Wildlife Service\u2019s responsibility to collect and disseminate wetlands data to the public, providing easy-to-use, map-like views and allowing users to view, query, download and print wetlands data.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "The Wetlands Mapper fulfills the U.S. Fish and Wildlife Service\u2019s responsibility to collect and disseminate wetlands data to the public. It provides easy-to-use, map-like views of the nation\u2019s wetland and deepwater resources and allows users to view, query, download and print wetlands data."
+          ]
+        },
+        {
+          "claim": "The National Wetlands Inventory program maps the nation's wetlands and produces national wetlands status and trends reports to Congress as mandated by the Emergency Wetlands Resources Act of 1986.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "The Emergency Wetlands Resources Act of 1986 requires the Secretary of the Interior, through the Director of the U.S. Fish and Wildlife Service, to map the nation's wetlands. It further requires the Secretary to produce national wetlands status and trends reports to Congress."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Source [S3] explicitly explains the mission and services of the National Wetlands Inventory and lists specific services."
+    }
+  }
+]

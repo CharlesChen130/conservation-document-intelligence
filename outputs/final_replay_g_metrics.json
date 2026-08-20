@@ -1,0 +1,243 @@
+[
+  {
+    "number": 1,
+    "id": "G01",
+    "elapsed_seconds": 7.497,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 7627,
+    "chat_output_tokens": 502,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "claim 1 lacks entity-bound requested method evidence",
+      "claim 3 lacks entity-bound requested method evidence",
+      "claim 5 lacks entity-bound requested method evidence"
+    ]
+  },
+  {
+    "number": 2,
+    "id": "G02",
+    "elapsed_seconds": 6.795,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5322,
+    "chat_output_tokens": 472,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 3,
+    "id": "G03",
+    "elapsed_seconds": 13.145,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 5467,
+    "chat_output_tokens": 480,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 4,
+    "id": "G04",
+    "elapsed_seconds": 9.525,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5634,
+    "chat_output_tokens": 562,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "claim 4 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 5,
+    "id": "G05",
+    "elapsed_seconds": 3.816,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5662,
+    "chat_output_tokens": 132,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 6,
+    "id": "G06",
+    "elapsed_seconds": 10.57,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5736,
+    "chat_output_tokens": 528,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 lacks an explicit subject-bound source span",
+      "claim 3 falls outside the requested scope",
+      "claim 4 falls outside the requested scope",
+      "surviving claims do not cover every mandatory question facet"
+    ]
+  },
+  {
+    "number": 7,
+    "id": "G07",
+    "elapsed_seconds": 5.062,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 5509,
+    "chat_output_tokens": 378,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 8,
+    "id": "G08",
+    "elapsed_seconds": 5.491,
+    "embedding_input_tokens": 20,
+    "chat_input_tokens": 5440,
+    "chat_output_tokens": 452,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 9,
+    "id": "G09",
+    "elapsed_seconds": 6.565,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 7349,
+    "chat_output_tokens": 349,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 10,
+    "id": "G10",
+    "elapsed_seconds": 8.953,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6021,
+    "chat_output_tokens": 322,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 11,
+    "id": "G11",
+    "elapsed_seconds": 10.632,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5427,
+    "chat_output_tokens": 388,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 4 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 12,
+    "id": "G12",
+    "elapsed_seconds": 8.239,
+    "embedding_input_tokens": 25,
+    "chat_input_tokens": 6175,
+    "chat_output_tokens": 486,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 falls outside the requested scope"
+    ]
+  },
+  {
+    "number": 13,
+    "id": "G13",
+    "elapsed_seconds": 10.578,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5727,
+    "chat_output_tokens": 298,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 14,
+    "id": "G14",
+    "elapsed_seconds": 6.279,
+    "embedding_input_tokens": 21,
+    "chat_input_tokens": 5561,
+    "chat_output_tokens": 416,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks an explicit subject-bound source span"
+    ]
+  },
+  {
+    "number": 15,
+    "id": "G15",
+    "elapsed_seconds": 0.007,
+    "embedding_input_tokens": 0,
+    "chat_input_tokens": 0,
+    "chat_output_tokens": 0,
+    "response_status": "",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 16,
+    "id": "G16",
+    "elapsed_seconds": 0.007,
+    "embedding_input_tokens": 0,
+    "chat_input_tokens": 0,
+    "chat_output_tokens": 0,
+    "response_status": "",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 17,
+    "id": "G17",
+    "elapsed_seconds": 2.686,
+    "embedding_input_tokens": 23,
+    "chat_input_tokens": 6227,
+    "chat_output_tokens": 83,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 18,
+    "id": "G18",
+    "elapsed_seconds": 3.413,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 6082,
+    "chat_output_tokens": 66,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 19,
+    "id": "G19",
+    "elapsed_seconds": 4.967,
+    "embedding_input_tokens": 18,
+    "chat_input_tokens": 5805,
+    "chat_output_tokens": 45,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  },
+  {
+    "number": 20,
+    "id": "G20",
+    "elapsed_seconds": 2.074,
+    "embedding_input_tokens": 22,
+    "chat_input_tokens": 5534,
+    "chat_output_tokens": 56,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": []
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "F12",
+    "question": "What actions are described for reducing invasive-species spread through bait, aquaculture, aquarium pets, or other live-organism trade?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Retrieve trade- or release-pathway prevention actions instead of relying only on boating evidence.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- Natural resource managers at the federal, state, regional, and tribal levels should seek to engage and elevate trusted voices among recreational user groups, hunters, anglers, the pet industry, aquaculture, and other industries and communities that may serve as vectors for AIS introduction and spread. [DOC009, pp. 12-15]",
+    "evidence_chunk_ids": [
+      "DOC009-C0009",
+      "DOC005-C0004",
+      "DOC007-C0004",
+      "DOC007-C0005",
+      "DOC008-C0005",
+      "DOC009-C0008"
+    ],
+    "elapsed_seconds": 9.869,
+    "embedding_input_tokens": 28,
+    "chat_input_tokens": 5678,
+    "chat_output_tokens": 617,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 falls outside the requested scope",
+      "claim 3 falls outside the requested scope",
+      "claim 4 falls outside the requested scope",
+      "claim 5 falls outside the requested scope"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Aquatic Invasive Species Commission Report recommends expanding USFWS grants to support contract fishing and subsidies for invasive carp harvest to limit spread and reduce populations of AIS.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Congress should expand USFWS grants to states and tribes to support contract fishing, including per -pound subsidies for invasive carp harvest and other harvest of AIS. Additional funding could support research and science-supported bounty programs for AIS harvest, while prioritizing limiting the spread and reducing population sizes of AIS."
+          ]
+        },
+        {
+          "claim": "Aquatic Invasive Species Commission Report advises outreach and education targeting recreational users, hunters, anglers, pet industry, aquaculture, and other communities to prevent AIS spread.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Natural resource managers at the federal, state, regional, and tribal levels should seek to engage and elevate trusted voices among recreational user groups, hunters, anglers, the pet industry, aquaculture, and other industries and communities that may serve as vectors for AIS introduction and spread."
+          ]
+        },
+        {
+          "claim": "Aquatic Invasive Species in the Chesapeake Bay Watershed identifies live bait, aquarium pets, water gardening, live seafood, and biological supplier trade as routes for AIS introduction and spread.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Aquatic invasive species have been and continue to be introduced to the Chesapeake Bay watershed by multiple routes, including transport aboard or affixed to commercial or recreational vessels ... trade involving live organisms (live bait, aquarium pets, water gardening, live seafood, biological supplier trade)"
+          ]
+        },
+        {
+          "claim": "Invasive Species Accomplishments Report describes a coordinated multi-agency response to zebra mussels found on Marimo moss balls sold in pet stores, including decontamination protocols and a voluntary moratorium on sales.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "USFWS launched an immediate response involving state, provincial, and federal agencies, tribes, nongovernmental organizations, and industry. This coordinated, multi-agency effort resulted in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols that prevented the entry of additional contaminated products."
+          ]
+        },
+        {
+          "claim": "Aquatic Invasive Species Commission Report recommends developing and promoting best management practices (BMPs) and public education campaigns including 'Clean, Drain, Dry' and 'Don't Let it Loose' messaging to reduce AIS spread.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Additionally, BMPs for reducing the spread of AIS should be developed and promoted. Congress should provide additional funding for the appropriate agencies to expand signage and visual-textual cues, and work to address language barriers at boat launches and fishing access points to induce AIS prevention activities, including \u201cClean, Drain, Dry\u201d decontamination actions and \u201cDon\u2019t Let it Loose\u201d messaging."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe actions to reduce invasive species spread via bait, aquaculture, aquarium pets, and live-organism trade."
+    }
+  }
+]

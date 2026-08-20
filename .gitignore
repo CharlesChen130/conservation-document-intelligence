@@ -1,0 +1,30 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+.vscode/
+*.orig
+*.rej
+.streamlit/secrets.toml
+
+# Local requirement inputs are retained in the workspace but not published
+# with the deployment repository.
+Document_Intelligence_Project_Description.docx
+Hugging_Face_Spaces_Deployment_Guide_Conservation_Prototype.docx
+
+# Rebuildable or machine-local artifacts. The compact SQLite database and
+# optional vector index are intentionally versioned for offline Space startup.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/conservation.db
+db/*.db-*

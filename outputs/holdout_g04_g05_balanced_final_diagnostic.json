@@ -1,0 +1,122 @@
+[
+  {
+    "id": "G04",
+    "question": "Compare the planning roles of the National Wetlands Inventory and State Wildlife Action Plans in conservation decisions.",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Distinguish the inventory's information or mapping function from the action plans' conservation-planning function with source-bound citations.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- USFWS National Wetlands Inventory produces and maintains the Wetlands Layer of the National Spatial Data Infrastructure, providing geospatial data to support conservation decisions. [DOC022]\n- USFWS National Wetlands Inventory provides Status and Trends reports on U.S. wetland extent and change to inform decision-makers and the public. [DOC022]\n- Missouri Wetland Program Plan includes updating the National Wetlands Inventory to improve data handling efficiencies for natural resource planning and risk assessment. [DOC002, pp. 3-6]\n- State Wildlife Action Plans identify species of greatest conservation need using diverse data sources to guide proactive conservation efforts beyond federally listed species. [DOC013, pp. 12-14]",
+    "evidence_chunk_ids": [
+      "DOC022-C0002",
+      "DOC002-C0002",
+      "DOC013-C0120",
+      "DOC034-C0063",
+      "DOC013-C0008",
+      "DOC027-C0009"
+    ],
+    "elapsed_seconds": 10.25,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5629,
+    "chat_output_tokens": 574,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 5 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "USFWS National Wetlands Inventory produces and maintains the Wetlands Layer of the National Spatial Data Infrastructure, providing geospatial data to support conservation decisions.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The Service is responsible for producing and maintaining the Wetlands Layer of the National Spatial Data Infrastructure (NSDI), which is an important component of the DOI geospatial portfolio and identified as a National Geospatial Data Asset (NGDA) by the FGDC ."
+          ]
+        },
+        {
+          "claim": "USFWS National Wetlands Inventory provides Status and Trends reports on U.S. wetland extent and change to inform decision-makers and the public.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Our Status and Trends reports provide estimates of U.S. wetland extent, type, and change specific to different time periods, ranging from the 1700s to 2019. Produced on a decadal basis, these reports inform decision-makers and the public on the status of the nation's wetlands as well as potential causes and implications of wetland change."
+          ]
+        },
+        {
+          "claim": "Missouri Wetland Program Plan includes updating the National Wetlands Inventory to improve data handling efficiencies for natural resource planning and risk assessment.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "MDC and other federal, state, and local agencies will systematically work on identified watersheds to incrementally develop an update to the National Wetlands Inventory (NWI) following the development of EDH to increase data handling efficiencies."
+          ]
+        },
+        {
+          "claim": "State Wildlife Action Plans identify species of greatest conservation need using diverse data sources to guide proactive conservation efforts beyond federally listed species.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "The wildlife action plans are building a new approach to conservation by looking beyond wildlife that is formally listed as \u201cendangered\u201d or managed as a traditional game species. Congress asked states to assess the health of a \u201cfull array\u201d of wildlife with particular attention to the wildlife species that have low or declining populations and are \u201cindicative of the diversity and health of wildlife\u201d of each state."
+          ]
+        },
+        {
+          "claim": "State Wildlife Action Plans use prior planning documents and data sources, including the National Wetlands Inventory, to develop comprehensive conservation strategies.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "In developing the wildlife action plans, state wildlife agencies drew on a sizeable volume of data sources and prior plans for individual species, habitats, and landscapes. Plans consulted by wildlife agencies ranged from: ... National Wetlands Inventory ..."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Direct comparison of decision-making influence",
+        "Specific examples of conservation decisions influenced by each plan",
+        "Details on integration of both plans in joint conservation efforts"
+      ],
+      "reason": "Sources provide explicit roles of National Wetlands Inventory in wetland data collection and State Wildlife Action Plans in species and habitat conservation planning."
+    }
+  },
+  {
+    "id": "G05",
+    "question": "What outreach actions are described for reducing the movement of forest pests through transported firewood?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return firewood-pathway outreach or behavior guidance rather than unrelated boating, bait, or pet-release actions.",
+    "status": "structured_generated",
+    "answer": "The retrieved evidence supports:\n\n- The Nature Conservancy\u2019s Don\u2019t Move Firewood campaign promotes best practice firewood use and seeks to raise awareness about the firewood pathway both directly, and indirectly by helping partner entities improve their outreach. [DOC010, pp. 2-4]",
+    "evidence_chunk_ids": [
+      "DOC001-C0040",
+      "DOC032-C0028",
+      "DOC001-C0038",
+      "DOC010-C0002",
+      "DOC033-C0038",
+      "DOC013-C0130"
+    ],
+    "elapsed_seconds": 4.258,
+    "embedding_input_tokens": 17,
+    "chat_input_tokens": 5662,
+    "chat_output_tokens": 132,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The Nature Conservancy\u2019s Don\u2019t Move Firewood campaign promotes best practice firewood use and seeks to raise awareness about the firewood pathway both directly, and indirectly by helping partner entities improve their outreach.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "The Nature Conservancy\u2019s Don\u2019t Move Firewood campaign promotes best practice firewood use and seeks to raise awareness about the firewood pathway both directly, and indirectly by helping partner entities improve their outreach."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Source [S4] explicitly describes outreach actions for reducing forest pest movement through transported firewood."
+    }
+  }
+]

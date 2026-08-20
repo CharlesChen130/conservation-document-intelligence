@@ -1,0 +1,35 @@
+official_questions:
+  - What documents discuss aquatic invasive species?
+  - What agencies appear most often in the corpus?
+  - What are the main conservation threats mentioned across the documents?
+  - What documents discuss wetlands or wetland management?
+  - What public documents mention waterfowl conservation?
+  - What is the relationship between invasive carp and aquatic habitat management?
+  - Which documents are most relevant to Missouri conservation planning?
+  - Generate a short cited summary of wetland conservation evidence in the corpus.
+  - What wiki pages were generated for species, habitats, threats, and agencies?
+  - What important questions remain unanswered by this corpus?
+
+additional_engineering_questions:
+  - How do conservation threats described for Missouri compare with threats in the Chesapeake Bay watershed?
+  - Which conservation claims are supported by documents from more than one agency?
+  - Which retrieved evidence lacks a PDF page number and therefore needs URL-only citation?
+  - What exact private MDC personnel records are contained in this public corpus?
+  - What evidence does this corpus provide about Amazon rainforest deforestation?
+
+official_rubric:
+  - category: Corpus and metadata
+    weight_percent: 20
+    expectation: Documents are public, organized, and traceable to source URLs.
+  - category: Search and retrieval
+    weight_percent: 20
+    expectation: Semantic search returns relevant chunks with source information.
+  - category: Entity and relation extraction
+    weight_percent: 20
+    expectation: Outputs are understandable and useful for conservation knowledge organization.
+  - category: LLM Wiki
+    weight_percent: 20
+    expectation: Wiki pages consolidate evidence and link related entities.
+  - category: Chatbot and demo
+    weight_percent: 20
+    expectation: Chatbot provides useful, cited answers and avoids unsupported claims.

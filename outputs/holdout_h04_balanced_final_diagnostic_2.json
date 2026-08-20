@@ -1,0 +1,81 @@
+[
+  {
+    "id": "H04",
+    "question": "Compare the roles of the U.S. Geological Survey and the U.S. Army Corps of Engineers in aquatic invasive species work.",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Attribute each agency's activities to the correct evidence and avoid unsupported organizational claims.",
+    "status": "structured_generated_narrowed",
+    "answer": "The retrieved evidence supports:\n\n- The U.S. Geological Survey\u2019s Nonindigenous Aquatic Species (NAS) Database has tracked introductions of freshwater aquatic organisms in the United States for the past four decades. A website provides access to occurrence reports, distribution maps, and fact sheets for more than 1,000 species. [DOC011, pp. 1-2]\n- USGS research also supports efforts of Federal management partners, such as the invasive carp subbasin partnerships. [DOC012, pp. 11-12]\n- The U.S. Army Corps of Engineers (USACE) conducts research on the management and eradication of aquatic invasive species, including Asian carp and zebra mussels, through its Engineer Research and Development Center (ERDC). [DOC006, pp. 1-3]\n- USACE implements an Invasive Species Program consistent with national invasive species management plans, coordinates with interagency bodies, and has an Invasive Species Leadership Team providing strategic direction and oversight. [DOC006, pp. 11-13]\n- Over the past decade, the USACE spent on average, $138 million per year on activities to address invasive species ... This includes activities for control and management, prevention, early detection and rapid response (EDRR), restoration, leadership and coordination, education and outreach, and research. [DOC006, pp. 1-3]",
+    "evidence_chunk_ids": [
+      "DOC011-C0001",
+      "DOC012-C0005",
+      "DOC005-C0002",
+      "DOC016-C0002",
+      "DOC006-C0001",
+      "DOC006-C0008"
+    ],
+    "elapsed_seconds": 10.458,
+    "embedding_input_tokens": 25,
+    "chat_input_tokens": 5941,
+    "chat_output_tokens": 659,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "The U.S. Geological Survey (USGS) Nonindigenous Aquatic Species Database tracks introductions of freshwater aquatic organisms in the United States and provides occurrence reports, distribution maps, and fact sheets for more than 1,000 species.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The U.S. Geological Survey\u2019s Nonindigenous Aquatic Species (NAS) Database has tracked introductions of freshwater aquatic organisms in the United States for the past four decades. A website provides access to occurrence reports, distribution maps, and fact sheets for more than 1,000 species."
+          ]
+        },
+        {
+          "claim": "USGS research supports efforts of Federal management partners including the U.S. Army Corps of Engineers and invasive carp subbasin partnerships, providing scientific research and responding to management priorities.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "USGS research also supports efforts of Federal management partners, such as the invasive carp subbasin partnerships ... the U.S. Army Corps of Engineers ... The USGS will remain apprised of the priorities of the various agencies ... by attendance of USGS representatives at appropriate subbasin partnership meetings and at professional society conferences ..."
+          ]
+        },
+        {
+          "claim": "The U.S. Army Corps of Engineers (USACE) conducts research on the management and eradication of aquatic invasive species, including Asian carp and zebra mussels, through its Engineer Research and Development Center (ERDC).",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Section 1108(a) of WRDA 2018, directs the Secretary to undertake research on the management and eradication of aquatic invasive species, including Asian carp and zebra mussels as part of the ongoing activities of the ERDC."
+          ]
+        },
+        {
+          "claim": "USACE implements an Invasive Species Program consistent with national invasive species management plans, coordinates with interagency bodies, and has an Invasive Species Leadership Team providing strategic direction and oversight.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "The USACE engages with these two interagency coordinating bodies and implements an Invasive Species Program that is consistent with the NISC National Invasive Species Management Plan (NISMP) and the Aquatic Nuisance Species Task Force Strategic Plan (ANSTF-SP). In 2005, USACE established an Invasive Species Leadership Team (ISLT) to provide oversight of a comprehensive Invasive Species Program."
+          ]
+        },
+        {
+          "claim": "USACE spends on average $138 million per year on aquatic invasive species activities including control, prevention, early detection, rapid response, restoration, leadership, coordination, education, outreach, and research.",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Over the past decade, the USACE spent on average, $138 million per year on activities to address invasive species ... This includes activities for control and management, prevention, early detection and rapid response (EDRR), restoration, leadership and coordination, education and outreach, and research."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific comparative analysis of roles",
+        "Detailed examples of USACE field operations",
+        "Direct collaboration mechanisms between USGS and USACE"
+      ],
+      "reason": "Sources provide detailed roles of USGS and USACE in aquatic invasive species work, including data management, research, coordination, and control efforts."
+    }
+  }
+]

@@ -1,0 +1,35 @@
+app:
+  title: Conservation Document Intelligence
+  disclaimer: >-
+    This system is an experimental research prototype based entirely on public
+    conservation documents. AI-generated answers may contain errors. Verify
+    important conclusions using the cited source documents.
+
+paths:
+  metadata: data/metadata.csv
+  raw: data/raw
+  processed: data/processed
+  database: db/conservation.db
+  vector_index: vector_index
+  wiki: wiki
+  outputs: outputs
+
+chunking:
+  target_words: 750
+  min_words: 600
+  max_words: 900
+  overlap_words: 100
+
+retrieval:
+  backend: local
+  top_k: 6
+  candidate_k: 20
+
+models:
+  chat: gpt-4.1-mini
+  embedding: text-embedding-3-small
+
+chatbot:
+  top_k: 6
+  max_question_characters: 1000
+  max_output_tokens: 1000

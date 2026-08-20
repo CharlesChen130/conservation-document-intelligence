@@ -1,0 +1,360 @@
+[
+  {
+    "id": "F02",
+    "question": "How does Missouri conservation evidence use prescribed fire in habitat management and landowner support?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Connect prescribed burning to Missouri habitat work or landowner training with source-specific citations.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- Missouri Department of Conservation uses prescribed burns as part of forest and woodland management plans to conserve biodiversity and manage habitat structure. [DOC001, pp. 86-88]\n- Missouri conservation uses prescribed fire combined with grazing and other tools to restore and maintain grassland and savanna habitats, working with landowners to promote best management practices. [DOC001, pp. 61-63]\n- Through partnerships and grants, MDC provides prescribed burning equipment to Prescribed Burn Cooperatives and supports private landowners in conducting prescribed burns. [DOC016]",
+    "evidence_chunk_ids": [
+      "DOC001-C0040",
+      "DOC018-C0002",
+      "DOC001-C0030",
+      "DOC020-C0009",
+      "DOC020-C0008",
+      "DOC016-C0004"
+    ],
+    "elapsed_seconds": 9.123,
+    "embedding_input_tokens": 16,
+    "chat_input_tokens": 5858,
+    "chat_output_tokens": 429,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 3 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Missouri Department of Conservation uses prescribed burns as part of forest and woodland management plans to conserve biodiversity and manage habitat structure.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Forest and woodland management plans are developed for wooded ecosystems to incorporate the use of IPM, prescribed burns, and a multitude of silvicultural prescriptions geared toward the conservation of forest and woodland biodiversity."
+          ]
+        },
+        {
+          "claim": "Missouri conservation uses prescribed fire combined with grazing and other tools to restore and maintain grassland and savanna habitats, working with landowners to promote best management practices.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Conservation actions within these geographies include working with landowners to promote best management practices and using fire, grazing and other management tools to restore remnant and reconstructed prairies and savannas."
+          ]
+        },
+        {
+          "claim": "MDC offers an online prescribed fire training course and a hands-on field exercise for private landowners, certifying them as prescribed burn managers to support safe and effective prescribed burning.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "MDC\u2019s private landowner burn workshop received a facelift in FY22... The field exercise gives the participant an opportunity to assist with actual fire line preparation, igniting the burn, monitoring the prescribed burn\u2019s progress... contractors who complete the training qualify for \u201cCertified Prescribed Burn Manager\u201d designation."
+          ]
+        },
+        {
+          "claim": "Through partnerships and grants, MDC provides prescribed burning equipment to Prescribed Burn Cooperatives and supports private landowners in conducting prescribed burns.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "MDC works with several nongovernmental organizations and the U.S. Forest Service (USFS) to provide grant funding and services for interested landowners. Through FY24, MDC was able to provide prescribed burning equipment to five Prescribed Burn Cooperatives."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific quantitative outcomes of prescribed fire use",
+        "Detailed landowner participation statistics beyond certification numbers",
+        "Long-term ecological impact assessments"
+      ],
+      "reason": "Multiple sources describe Missouri conservation's use of prescribed fire in habitat management and landowner support."
+    }
+  },
+  {
+    "id": "F06",
+    "question": "What roles do citizen reporting and open-access data play in early detection and rapid response to invasive species?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Tie public observations or open data to detection or response using explicit source evidence.",
+    "status": "structured_generated",
+    "answer": "The retrieved evidence supports:\n\n- Aquatic Invasive Species Commission Report encourages federal resource managers to expand opportunities for citizen data collection and open-access data systems to support AIS detection and aid wildlife managers in conducting early detection and rapid response actions. [DOC009, pp. 12-15]\n- Invasive Species Accomplishments Report highlights use of web-based applications for communication, tool consolidation, and data aggregation (e.g., Siren) to advance a National Early Detection and Rapid Response Framework. [DOC007, pp. 6-9]\n- Aquatic Invasive Species Research Report promotes dissemination and utilization of existing databases (e.g., EDDMapS, USDA Plants Database, USGS Nonindigenous Aquatic Species Database) to improve detection and identification of invasive species. [DOC006, pp. 13-15]",
+    "evidence_chunk_ids": [
+      "DOC007-C0003",
+      "DOC008-C0003",
+      "DOC007-C0007",
+      "DOC008-C0007",
+      "DOC006-C0009",
+      "DOC009-C0009"
+    ],
+    "elapsed_seconds": 6.545,
+    "embedding_input_tokens": 20,
+    "chat_input_tokens": 5819,
+    "chat_output_tokens": 360,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Aquatic Invasive Species Commission Report encourages federal resource managers to expand opportunities for citizen data collection and open-access data systems to support AIS detection and aid wildlife managers in conducting early detection and rapid response actions",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "federal resource managers should be encouraged to expand opportunities for citizen data collection and open-access data systems to support AIS detection and aid wildlife managers in conducting EDRR actions"
+          ]
+        },
+        {
+          "claim": "Invasive Species Accomplishments Report highlights use of web-based applications for communication, tool consolidation, and data aggregation (e.g., Siren) to advance a National Early Detection and Rapid Response Framework",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Advanced a National EDRR Framework to create efficiencies and reduce costs and harm Coordination mechanisms, decision support tools, field detection tools, surveillance funding and capacity, response funding and capacity ... web-based applications for communication, tool consolidation, and data aggregation (e.g., Siren)"
+          ]
+        },
+        {
+          "claim": "Aquatic Invasive Species Research Report promotes dissemination and utilization of existing databases (e.g., EDDMapS, USDA Plants Database, USGS Nonindigenous Aquatic Species Database) to improve detection and identification of invasive species",
+          "source_labels": [
+            "S5"
+          ],
+          "supporting_spans": [
+            "Disseminate and promote the utilization of existing databases (e.g., EDDMapS, USDA Plants Database, USGS Nonindigenous Aquatic Species Database"
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific examples of citizen reporting mechanisms",
+        "Quantitative impact of citizen reporting on response times",
+        "Details on integration of open-access data with official response systems"
+      ],
+      "reason": "Sources explicitly describe citizen data collection and open-access data supporting early detection and rapid response to invasive species."
+    }
+  },
+  {
+    "id": "F09",
+    "question": "How do federal, state, tribal, and private partners coordinate aquatic invasive species prevention or control?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Describe concrete coordination structures or activities while covering the named partner sectors supported by evidence.",
+    "status": "structured_generated_pruned",
+    "answer": "The retrieved evidence supports:\n\n- USACE coordinates with local, State, Federal agencies and NGOs to manage invasive species at the project, regional, and National levels. [DOC006, pp. 15-17]\n- Federal agencies enhance coordination and effectiveness of programs by fully engaging state, tribal, territorial, local governments, and private sector partners using best available science. [DOC006, pp. 15-17]\n- Congress should direct federal agencies to cooperate with the ANSTF and clearly designate authority of each partner agency to coordinate aquatic invasive species response with state and tribal leaders. [DOC009, pp. 7-8]\n- DOI coordinates invasive species management with federal, state, tribal, territorial, local governments, private landowners, and NGOs through regular coordination at all levels. [DOC007, pp. 16-22]",
+    "evidence_chunk_ids": [
+      "DOC006-C0010",
+      "DOC009-C0005",
+      "DOC009-C0002",
+      "DOC008-C0003",
+      "DOC007-C0003",
+      "DOC007-C0007"
+    ],
+    "elapsed_seconds": 7.685,
+    "embedding_input_tokens": 19,
+    "chat_input_tokens": 5754,
+    "chat_output_tokens": 580,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 4 lacks an explicit subject-bound source span"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "USACE coordinates with local, State, Federal agencies and NGOs to manage invasive species at the project, regional, and National levels.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Objective 1: Partner/coordinate with local, State, Federal agencies and NGOs to manage invasive species at the project, regional, and National levels. Each ISLT member does this within their MSC/District and coordinates with other Districts in their MSC to do so."
+          ]
+        },
+        {
+          "claim": "Federal agencies enhance coordination and effectiveness of programs by fully engaging state, tribal, territorial, local governments, and private sector partners using best available science.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Enhance the coordination and effectiveness of Federal programs to better leverage resources and fully engage state, tribal, territorial, and local governments and international and private sector partners. Use the best available science to guide management decisions, policy development, and provide authoritative information to the public."
+          ]
+        },
+        {
+          "claim": "Congress should direct federal agencies to cooperate with the ANSTF and clearly designate authority of each partner agency to coordinate aquatic invasive species response with state and tribal leaders.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Congress should direct the leading federal agencies to define all key governmental and nongovernmental partners to be involved in carrying out the response and clearly designate AIS Commission: Improving the Prevention, Eradication, Control and Mitigation of Aquatic Invasive Species Report and Recommendations, February 2023 P a g e | 7 the authority of each partner agency."
+          ]
+        },
+        {
+          "claim": "DOI bureaus and offices collaborate with tribes, territories, indigenous communities, and other partners through MOUs and national education initiatives to coordinate invasive species management.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "Increased engagement with tribes, territories, and indigenous communities to understand needs and work on shared solutions Native American Fish and Wildlife Society, Native Hawaiian Community biocultural considerations for Hawaiian forest bird conservation, U.S. Territorial conferences on infrastructure and collaboration Led and expanded national Memoranda of Understanding (MOU) to act on shared priorities ... Supported national education initiatives to encourage consistent messages and best\u00a0pr"
+          ]
+        },
+        {
+          "claim": "DOI coordinates invasive species management with federal, state, tribal, territorial, local governments, private landowners, and NGOs through regular coordination at all levels.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "Regular coordination at all levels yielded both local successes and nationwide results. Coordination involved working within and across bureaus and offices and with many partners, such as other federal agencies; state, local, tribal, and territorial governments; private landowners, and non-governmental groups."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe coordinated efforts among federal, state, tribal, and private partners for aquatic invasive species prevention and control."
+    }
+  },
+  {
+    "id": "F10",
+    "question": "Which sources describe harmful algal bloom detection or management research?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Return source-specific detection, monitoring, assessment, or management research for harmful algal blooms.",
+    "status": "structured_generated_pruned_refined",
+    "answer": "The retrieved evidence supports:\n\n- **Aquatic Invasive Species Research Report** \u2014 The WRDA 2018 (Section 1109), further expanded program authorization to include research on improved strategies for early detection, prevention, and management to reduce the occurrence and effects of harmful algal blooms in our Nation\u2019s water resources [DOC006, pp. 4-6]",
+    "evidence_chunk_ids": [
+      "DOC006-C0003",
+      "DOC012-C0013",
+      "DOC006-C0005",
+      "DOC009-C0011",
+      "DOC009-C0005",
+      "DOC012-C0012",
+      "DOC005-C0013",
+      "DOC029-C0006"
+    ],
+    "elapsed_seconds": 4.768,
+    "embedding_input_tokens": 12,
+    "chat_input_tokens": 7308,
+    "chat_output_tokens": 313,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 2 lacks entity-bound requested method evidence",
+      "claim 3 lacks entity-bound requested method evidence"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Source S1 describes research on improved strategies for early detection, prevention, and management to reduce the occurrence and effects of harmful algal blooms.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "The WRDA 2018 (Section 1109), further expanded program authorization to include research on improved strategies for early detection, prevention, and management to reduce the occurrence and effects of harmful algal blooms in our Nation\u2019s water resources."
+          ]
+        },
+        {
+          "claim": "Source S3 describes research to study HAB dynamics, improve prediction of bloom development, and identify potential targets for bloom mitigation.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "This research will advance the scientific knowledge on key drivers and life cycle patterns of harmful bloom-forming cyanobacteria, enable improved prediction of bloom development, and identify potential targets for achieving successful bloom mitigation."
+          ]
+        },
+        {
+          "claim": "Source S3 describes a pilot-scale research demonstration project assessing a system for removing and disposing blue-green algae from large waterbodies.",
+          "source_labels": [
+            "S3"
+          ],
+          "supporting_spans": [
+            "Scientists at ERDC-Construction Engineering Research Laboratory executed a pilot-scale research demonstration project in 2019 to assess the engineering performance and scalability of a new system for removing and disposing blue-green algae (cyanobacteria) from large waterbodies."
+          ]
+        }
+      ],
+      "missing_information": [
+        "Specific methods used in detection",
+        "Detailed management strategies",
+        "Outcomes of the research"
+      ],
+      "reason": "Sources S1 and S3 explicitly describe harmful algal bloom detection and management research."
+    }
+  },
+  {
+    "id": "F12",
+    "question": "What actions are described for reducing invasive-species spread through bait, aquaculture, aquarium pets, or other live-organism trade?",
+    "expected_behavior": "supported_answer",
+    "evaluation_focus": "Retrieve trade- or release-pathway prevention actions instead of relying only on boating evidence.",
+    "status": "coverage_abstention",
+    "answer": "I do not have enough retrieved evidence in this corpus to answer that question.",
+    "evidence_chunk_ids": [
+      "DOC005-C0004",
+      "DOC009-C0009",
+      "DOC007-C0004",
+      "DOC007-C0005",
+      "DOC008-C0005",
+      "DOC009-C0008"
+    ],
+    "elapsed_seconds": 8.552,
+    "embedding_input_tokens": 28,
+    "chat_input_tokens": 5692,
+    "chat_output_tokens": 620,
+    "response_status": "completed",
+    "incomplete_reason": "",
+    "grounding_errors": [
+      "claim 1 falls outside the requested scope",
+      "claim 2 lacks an explicit subject-bound source span",
+      "claim 4 falls outside the requested scope",
+      "claim 5 lacks an explicit subject-bound source span",
+      "claim 5 falls outside the requested scope",
+      "surviving claims do not cover every mandatory question facet"
+    ],
+    "structured_decision": {
+      "sufficient": true,
+      "claims": [
+        {
+          "claim": "Aquatic invasive species are introduced via trade involving live organisms such as live bait, aquarium pets, water gardening, live seafood, and biological supplier trade.",
+          "source_labels": [
+            "S1"
+          ],
+          "supporting_spans": [
+            "Aquatic invasive species have been and continue to be introduced to the Chesapeake Bay watershed by multiple routes, including ... trade involving live organisms (live bait, aquarium pets, water gardening, live seafood, biological supplier trade)"
+          ]
+        },
+        {
+          "claim": "USFWS launched a multi-agency response to zebra mussels found on Marimo moss balls sold as aquarium pets, resulting in decontamination protocols, a voluntary moratorium on sales, and enhanced border inspections.",
+          "source_labels": [
+            "S4"
+          ],
+          "supporting_spans": [
+            "USFWS launched an immediate response involving state, provincial, and federal agencies, tribes, nongovernmental organizations, and industry. This coordinated, multi-agency effort resulted in development of effective decontamination protocols, a national voluntary moratorium on Marimo moss ball sales, and enhanced border inspection protocols that prevented the entry of additional contaminated products."
+          ]
+        },
+        {
+          "claim": "Natural resource managers should engage recreational user groups, the pet industry, aquaculture, and other communities that may serve as vectors for AIS introduction and spread through coordinated education and outreach campaigns.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Natural resource managers at the federal, state, regional, and tribal levels should seek to engage and elevate trusted voices among recreational user groups, hunters, anglers, the pet industry, aquaculture, and other industries and communities that may serve as vectors for AIS introduction and spread."
+          ]
+        },
+        {
+          "claim": "Congress should expand USFWS grants to states and tribes to support contract fishing, including per-pound subsidies for invasive carp harvest and other AIS harvest, and support research and bounty programs prioritizing limiting spread and reducing populations.",
+          "source_labels": [
+            "S2"
+          ],
+          "supporting_spans": [
+            "Congress should expand USFWS grants to states and tribes to support contract fishing, including per-pound subsidies for invasive carp harvest and other harvest of AIS. Additional funding could support research and science-supported bounty programs for AIS harvest, while prioritizing limiting the spread and reducing population sizes of AIS."
+          ]
+        },
+        {
+          "claim": "Federal policy should incentivize development of AIS-resistant boating and recreational equipment and promote voluntary design standards to reduce AIS transport in recreational watercraft and facilitate inspection and decontamination.",
+          "source_labels": [
+            "S6"
+          ],
+          "supporting_spans": [
+            "Federal policy should seek to incentivize the further development of AIS-resistant boating and recreational equipment. The ANSTF should take the lead in building upon, expanding, and promoting partnerships ... to implement the ABYC Technical Information Report (T-32) on AIS. These voluntary design standards could include aspects that alter and/or improve the design, engineering and manufacturing ... to eliminate or reduce the probability of quagga or zebra mussels and other AIS from being ..."
+          ]
+        }
+      ],
+      "missing_information": [],
+      "reason": "Multiple sources describe actions to reduce invasive species spread via bait, aquaculture, aquarium pets, and live-organism trade."
+    }
+  }
+]
